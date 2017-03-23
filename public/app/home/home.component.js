@@ -20,7 +20,7 @@ var HomeComponent = (function () {
 }());
 HomeComponent = __decorate([
     core_1.Component({
-        selector: '<mean-app></mean-app>',
+        selector: 'home',
         templateUrl: './app/home/home.template.html'
     }),
     __metadata("design:paramtypes", [authentication_service_1.AuthenticationService])

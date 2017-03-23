@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../authentication/authentication.service';
 @Component({
-selector: '<mean-app></mean-app>',
+selector: 'home',
 templateUrl: './app/home/home.template.html'
 })
 export class HomeComponent {
