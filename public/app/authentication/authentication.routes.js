@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var authentication_component_1 = require("./authentication.component");
-var signin_component_1 = require("./signin/signin.component");
-var signup_component_1 = require("./signup/signup.component");
+var signin_component_1 = require("../authentication/signin/signin.component");
+var signup_component_1 = require("../authentication/signup/signup.component");
 exports.AuthenticationRoutes = [{
         path: 'authentication',
         component: authentication_component_1.AuthenticationComponent,

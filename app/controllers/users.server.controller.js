@@ -18,6 +18,15 @@ const getErrorMessage = function (err) {
     }
     return message;
 };
+exports.requiresLogin = function (req, res, next) {
+    console.log('requiredLogin')
+    if (!req.isAuthenticated()) {
+        return res.status(401).send({
+            message: 'User is not logged in'
+        });
+    }
+    next();
+};
 exports.signin = function (req, res, next) {
     passport.authenticate('local', function (err, user, info) {
         if (err || !user) {
@@ -26,7 +35,7 @@ exports.signin = function (req, res, next) {
             // Remove sensitive data before login
             user.password = undefined;
             user.salt = undefined;
-            
+
             req.login(user, function (err) {
                 if (err) {
                     console.log("if error occures");

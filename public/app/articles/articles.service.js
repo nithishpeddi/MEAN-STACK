@@ -17,39 +17,46 @@ var ArticlesService = (function () {
     function ArticlesService(_http) {
         this._http = _http;
         this._baseURL = 'api/articles';
+        this._options = { headers: new http_1.Headers({ 'Content-Type': 'application/json' }) };
     }
     ArticlesService.prototype.create = function (article) {
+        console.log('create');
         return this._http
-            .post(this._baseURL, article)
+            .post(this._baseURL, article, this._options)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ArticlesService.prototype.read = function (articleId) {
+        console.log('read');
         return this._http
             .get(this._baseURL + "/" + articleId)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ArticlesService.prototype.update = function (article) {
+        console.log('update');
+        console.log('article', article);
         return this._http
             .put(this._baseURL + "/" + article._id, article)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ArticlesService.prototype.delete = function (articleId) {
-        console.log('articleid', articleId);
+        console.log('delete');
         return this._http
             .delete(this._baseURL + "/" + articleId)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ArticlesService.prototype.list = function () {
+        console.log('list');
         return this._http
             .get(this._baseURL)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
     ArticlesService.prototype.handleError = function (error) {
+        console.log('handleError');
         return Observable_1.Observable.throw(error.json().message || 'Server error');
     };
     return ArticlesService;

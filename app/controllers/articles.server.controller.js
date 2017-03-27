@@ -10,9 +10,12 @@ function getErrorMessage(err) {
     }
 };
 exports.create = function (req, res) {
+    console.log('server - create')
     const article = new Article(req.body);
+    console.log('article', article)
     article.creator = req.user;
     article.save((err) => {
+        console.log('saved')
         if (err) {
             return res.status(400).send({
                 message: getErrorMessage(err)
@@ -23,7 +26,7 @@ exports.create = function (req, res) {
     });
 };
 exports.list = function (req, res) {
-    Article.find().sort('-created').populate('creator','firstName lastName fullName').exec((err, articles) => {
+    Article.find().sort('-created').populate('creator', 'firstName lastName fullName').exec((err, articles) => {
         if (err) {
             return res.status(400).send({
                 message: getErrorMessage(err)
@@ -34,11 +37,9 @@ exports.list = function (req, res) {
     });
 };
 exports.articleByID = function (req, res, next, id) {
-    console.log('ID', id);
     Article.findById(id).populate('creator', 'firstName lastName fullName').exec((err,
         article) => {
         if (err) return next(err);
-
         if (!article) return next(new Error('Failed to load article ' + id));
         req.article = article;
         next();
@@ -73,6 +74,7 @@ exports.delete = function (req, res) {
         }
     });
 };
+
 exports.hasAuthorization = function (req, res, next) {
     if (req.article.creator.id !== req.user.id) {
         return res.status(403).send({
