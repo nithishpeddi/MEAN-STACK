@@ -4,19 +4,32 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
-import { HomeModule } from './home/home.module';
+import { HomeComponent } from './class/home.component';
 import { AuthenticationService } from './authentication/authentication.service';
-import { AuthenticationModule } from './authentication/authentication.module';
+import { SigninComponent } from '../app/authentication/signin/signin.component';
+import { SignupComponent } from '../app/authentication/signup/signup.component';
+import{FormsModule} from '@angular/forms';
+import{ArticlesComponent} from './articles/articles.component';
+import { CreateComponent } from './articles/create/create.component';
+import { ListComponent } from './articles/list/list.component';
+import { ViewComponent } from './articles/view/view.component';
+import { EditComponent } from './articles/edit/edit.component';
+
+
+
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
-        AuthenticationModule,
-        HomeModule,
         RouterModule.forRoot(AppRoutes),
+        FormsModule
+
+    ],
+    exports: [
+        RouterModule
     ],
     declarations: [
-        AppComponent
+        AppComponent, HomeComponent, SigninComponent, SignupComponent,ArticlesComponent,ListComponent,CreateComponent,EditComponent,ViewComponent
     ],
     providers: [
         AuthenticationService

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import{AppRoutes} from './app.routes';
 @Component({
-selector: 'mean-app',
-template: '<h1>Hello World</h1>',
+    moduleId: module.id,
+    selector: 'mean-app',
+    templateUrl: 'app.template.html',
+    styleUrls:['app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent { }

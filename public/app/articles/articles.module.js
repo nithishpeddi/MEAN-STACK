@@ -10,7 +10,6 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
-var articles_routes_1 = require("./articles.routes");
 var articles_component_1 = require("./articles.component");
 var create_component_1 = require("./create/create.component");
 var list_component_1 = require("./list/list.component");
@@ -26,14 +25,14 @@ ArticlesModule = __decorate([
         imports: [
             common_1.CommonModule,
             forms_1.FormsModule,
-            router_1.RouterModule.forChild(articles_routes_1.ArticlesRoutes),
+            router_1.RouterModule
         ],
         declarations: [
             articles_component_1.ArticlesComponent,
             create_component_1.CreateComponent,
             list_component_1.ListComponent,
             view_component_1.ViewComponent,
-            edit_component_1.EditComponent,
+            edit_component_1.EditComponent
         ]
     })
 ], ArticlesModule);

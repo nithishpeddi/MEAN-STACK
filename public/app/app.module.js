@@ -12,9 +12,16 @@ var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
-var home_module_1 = require("./home/home.module");
+var home_component_1 = require("./class/home.component");
 var authentication_service_1 = require("./authentication/authentication.service");
-var authentication_module_1 = require("./authentication/authentication.module");
+var signin_component_1 = require("../app/authentication/signin/signin.component");
+var signup_component_1 = require("../app/authentication/signup/signup.component");
+var forms_1 = require("@angular/forms");
+var articles_component_1 = require("./articles/articles.component");
+var create_component_1 = require("./articles/create/create.component");
+var list_component_1 = require("./articles/list/list.component");
+var view_component_1 = require("./articles/view/view.component");
+var edit_component_1 = require("./articles/edit/edit.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,12 +32,14 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
-            authentication_module_1.AuthenticationModule,
-            home_module_1.HomeModule,
             router_1.RouterModule.forRoot(app_routes_1.AppRoutes),
+            forms_1.FormsModule
+        ],
+        exports: [
+            router_1.RouterModule
         ],
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent, home_component_1.HomeComponent, signin_component_1.SigninComponent, signup_component_1.SignupComponent, articles_component_1.ArticlesComponent, list_component_1.ListComponent, create_component_1.CreateComponent, edit_component_1.EditComponent, view_component_1.ViewComponent
         ],
         providers: [
             authentication_service_1.AuthenticationService

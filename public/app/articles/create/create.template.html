@@ -1,10 +1,9 @@
 <h1>New Article</h1>
-<form (ngSubmit)="create()
-" novalidate>
+<form (ngSubmit)="create()" novalidate>
     <div>
         <label for="title">Title</label>
         <div>
-            <input type="text" required [ (ngModel)]="article.title" name="title" placeholder="Title">
+            <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Title">
         </div>
     </div>
     <div>
@@ -14,7 +13,7 @@
         </div>
     </div>
     <div>
-        <input type="submit">
+        <button type="submit">submit </button>
     </div>
     <strong id="error">
 {{errorMessage}}

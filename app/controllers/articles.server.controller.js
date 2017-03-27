@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Article = mongoose.model('Article'); function getErrorMessage(err) {
+const Article = mongoose.model('Article');
+function getErrorMessage(err) {
     if (err.errors) {
         for (let errName in err.errors) {
             if (err.errors[errName].message) return err.errors[errName].message;
@@ -22,7 +23,7 @@ exports.create = function (req, res) {
     });
 };
 exports.list = function (req, res) {
-    Article.find().sort('-created').populate('creator', 'firstName lastName fullName').exec((err, articles) => {
+    Article.find().sort('-created').populate('creator','firstName lastName fullName').exec((err, articles) => {
         if (err) {
             return res.status(400).send({
                 message: getErrorMessage(err)
@@ -33,9 +34,11 @@ exports.list = function (req, res) {
     });
 };
 exports.articleByID = function (req, res, next, id) {
+    console.log('ID', id);
     Article.findById(id).populate('creator', 'firstName lastName fullName').exec((err,
         article) => {
         if (err) return next(err);
+
         if (!article) return next(new Error('Failed to load article ' + id));
         req.article = article;
         next();

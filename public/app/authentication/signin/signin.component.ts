@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
+
 @Component({
     selector: 'signin',
-    templateUrl: 'app/authentication/signin/signin.template.html'
+    templateUrl: 'app/authentication/signin/signin.template.html',
+    styleUrls: ['app/authentication/signin/signin.css']
 })
 export class SigninComponent {
     errorMessage: string;
@@ -12,7 +14,8 @@ export class SigninComponent {
         Router) { }
     signin() {
         this._authenticationService.signin(this.credentials).subscribe(result =>
-            this._router.navigate(['/']),
+            this._router.navigate(['/articles']),
             error => this.errorMessage = error);
     }
+
 }

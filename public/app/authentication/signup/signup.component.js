@@ -28,7 +28,8 @@ var SignupComponent = (function () {
 SignupComponent = __decorate([
     core_1.Component({
         selector: 'signup',
-        templateUrl: 'app/authentication/signup/signup.template.html'
+        templateUrl: 'app/authentication/signup/signup.template.html',
+        styleUrls: ['app/authentication/signup/signup.component.css']
     }),
     __metadata("design:paramtypes", [authentication_service_1.AuthenticationService,
         router_1.Router])

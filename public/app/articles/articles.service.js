@@ -37,6 +37,7 @@ var ArticlesService = (function () {
             .catch(this.handleError);
     };
     ArticlesService.prototype.delete = function (articleId) {
+        console.log('articleid', articleId);
         return this._http
             .delete(this._baseURL + "/" + articleId)
             .map(function (res) { return res.json(); })

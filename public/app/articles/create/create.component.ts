@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArticlesService } from '../../articles/articles.service';
+import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'create',
     templateUrl: 'app/articles/create/create.template.html'

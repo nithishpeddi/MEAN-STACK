@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 @Component({
     selector: 'signup',
-    templateUrl: 'app/authentication/signup/signup.template.html'
+    templateUrl: 'app/authentication/signup/signup.template.html',
+    styleUrls:['app/authentication/signup/signup.component.css']
 })
 export class SignupComponent {
     errorMessage: string;

@@ -26,10 +26,13 @@ exports.signin = function (req, res, next) {
             // Remove sensitive data before login
             user.password = undefined;
             user.salt = undefined;
+            
             req.login(user, function (err) {
                 if (err) {
+                    console.log("if error occures");
                     res.status(400).send(err);
                 } else {
+                    console.log("no errror");
                     res.json(user);
                 }
             });
@@ -91,12 +94,4 @@ exports.saveOAuthUserProfile = function (req, profile, done) {
             }
         }
     });
-};
-exports.requiresLogin = function (req, res, next) {
-    if (!req.isAuthenticated()) {
-        return res.status(401).send({
-            message: 'User is not logged in'
-        });
-    }
-    next();
 };

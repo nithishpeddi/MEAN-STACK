@@ -21,7 +21,7 @@ var SigninComponent = (function () {
     SigninComponent.prototype.signin = function () {
         var _this = this;
         this._authenticationService.signin(this.credentials).subscribe(function (result) {
-            return _this._router.navigate(['/']);
+            return _this._router.navigate(['/articles']);
         }, function (error) { return _this.errorMessage = error; });
     };
     return SigninComponent;
@@ -29,7 +29,8 @@ var SigninComponent = (function () {
 SigninComponent = __decorate([
     core_1.Component({
         selector: 'signin',
-        templateUrl: 'app/authentication/signin/signin.template.html'
+        templateUrl: 'app/authentication/signin/signin.template.html',
+        styleUrls: ['app/authentication/signin/signin.css']
     }),
     __metadata("design:paramtypes", [authentication_service_1.AuthenticationService,
         router_1.Router])

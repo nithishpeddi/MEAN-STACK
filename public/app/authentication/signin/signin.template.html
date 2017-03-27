@@ -1,15 +1,21 @@
 <form (ngSubmit)="signin()">
-    <div>
-        <label>Username:</label>
-        <input type="text" [(ngModel)]="credentials.username" name="username">
+    <div class="container">
+        <label><b>Username:</b></label>
+
+        <input type="text" [(ngModel)]="credentials.username" name="username" placeholder="User Name">
     </div>
-    <div>
+    <div class="container">
         <label>Password:</label>
-        <input type="password" [(ngModel)]="credentials.password" name="password">
+        <input type="password" [(ngModel)]="credentials.password" name="password" placeholder="Password">
     </div>
     <div>
-        <input type="submit" value="Sign In">
+        <button type="submit" value="Sign In">sign in </button>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn" (click)="cancel()">Cancel</button>
+        <input type="checkbox" checked="checked"> Remember me..!
+        <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
     <span>{{errorMessage}}</span>
-    <router-outlet> </router-outlet>
 </form>
+<router-outlet> </router-outlet>

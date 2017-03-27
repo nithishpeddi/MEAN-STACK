@@ -18,13 +18,16 @@ export class ArticlesService {
             .map((res: Response) => res.json())
             .catch(this.handleError);
     }
+    
     update(article: any): Observable<any> {
         return this._http
             .put(`${this._baseURL}/${article._id}`, article)
             .map((res: Response) => res.json())
             .catch(this.handleError);
+            
     }
     delete(articleId: any): Observable<any> {
+        console.log('articleid',articleId)
         return this._http
             .delete(`${this._baseURL}/${articleId}`)
             .map((res: Response) => res.json())

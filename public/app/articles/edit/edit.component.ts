@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
 import { ArticlesService } from '../articles.service';
-
 @Component({
     selector: 'edit',
     templateUrl: 'app/articles/edit/edit.component.html'
