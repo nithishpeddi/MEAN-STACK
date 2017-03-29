@@ -1,0 +1,19 @@
+ <div class="account col-sm-2">
+        <b>Do you have an account ?? <h2>Create One</h2></b>
+        <div class="container">
+            <div *ngIf="!user">
+                <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signup']">Signup</button>
+                <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signin']">Signin</button>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="user">
+        <h1>Hello {{user.firstName}}</h1>
+        <a href="/api/auth/signout">Signout</a>
+        <ul>
+            <li><a [routerLink]="['/articles']">List Articles</a></li>
+            <li><a [routerLink]="['/articles/create']">Create Article</a></li>
+            <li><a [routerLink]="['/articles/edit']"> Edit Article</a></li>
+
+        </ul>
+    <router-outlet></router-outlet>

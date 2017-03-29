@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { ArticlesService } from '../articles/articles.service';
 import { ArticlesComponent } from './articles.component';
-import { CreateComponent } from './create/create.component';
-import { ListComponent } from './list/list.component';
-import { ViewComponent } from './view/view.component';
-import { EditComponent } from './edit/edit.component';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -16,10 +13,12 @@ import { EditComponent } from './edit/edit.component';
     ],
     declarations: [
         ArticlesComponent,
-        CreateComponent,
-        ListComponent,
-        ViewComponent,
-        EditComponent
-    ]
+
+    ],
+    providers: [
+        ArticlesService
+    ],
 })
-export class ArticlesModule { }
+export class ArticlesModule {
+
+}

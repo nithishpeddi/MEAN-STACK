@@ -10,11 +10,8 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
+var articles_service_1 = require("../articles/articles.service");
 var articles_component_1 = require("./articles.component");
-var create_component_1 = require("./create/create.component");
-var list_component_1 = require("./list/list.component");
-var view_component_1 = require("./view/view.component");
-var edit_component_1 = require("./edit/edit.component");
 var ArticlesModule = (function () {
     function ArticlesModule() {
     }
@@ -29,11 +26,10 @@ ArticlesModule = __decorate([
         ],
         declarations: [
             articles_component_1.ArticlesComponent,
-            create_component_1.CreateComponent,
-            list_component_1.ListComponent,
-            view_component_1.ViewComponent,
-            edit_component_1.EditComponent
-        ]
+        ],
+        providers: [
+            articles_service_1.ArticlesService
+        ],
     })
 ], ArticlesModule);
 exports.ArticlesModule = ArticlesModule;
