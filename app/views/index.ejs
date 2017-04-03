@@ -3,11 +3,6 @@
 <head>
 <title><%= title %></title>
 <base href="/">
-</head>
-<body>
-<mean-app>
-<h1>Loading...</h1>
-</mean-app>
 <script type="text/javascript">
 window.user = <%- user || 'null' %>;
 </script>
@@ -25,6 +20,13 @@ window.user = <%- user || 'null' %>;
 <script src="lib/systemjs/dist/system.js"></script>
 <script src="systemjs.config.js"></script>
 <script src="[bower or npm folder]/angular-star-rating/dist/index.js"></script>
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<mean-app>
+<h1>Loading...</h1>
+</mean-app>
 
 <script>
 System.import('app').catch(function(err){ console.error(err); });

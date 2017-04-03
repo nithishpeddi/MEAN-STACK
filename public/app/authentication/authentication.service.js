@@ -52,8 +52,8 @@ var AuthenticationService = (function () {
         var _this = this;
         return this.http.get(this._signoutURL)
             .map(function () {
-            console.log('map');
-            _this._router.navigate(['/articles/signin']);
+            _this.user = undefined;
+            _this._router.navigate(['/authentication/signin']);
         })
             .catch(this.handleError);
     };

@@ -4,6 +4,7 @@
 
             <div *ngIf="!user">
                 <b>Do you have an account ?? <h2>Create One</h2></b>
+                <i class="fa fa-hand-o-right" aria-hidden="true"></i>
                 <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signup']">Signup</button>
                 <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signin']">Signin</button>
             </div>

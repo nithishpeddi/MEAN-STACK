@@ -24,22 +24,25 @@ export class AuthenticationService {
             .catch(this.handleError)
     }
     signup(user: any): Observable<any> {
+
         let body = JSON.stringify(user);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(this._signupURL, body, options)
             .map(res => this.user = res.json())
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
     private handleError(error: Response) {
         console.error(error);
         return Observable.throw(error.json().message || 'Server error');
     }
     signout() {
+
+
         return this.http.get(this._signoutURL)
             .map(() => {
-                console.log('map')
-                this._router.navigate(['/articles/signin']);
+                this.user = undefined;
+                this._router.navigate(['/authentication/signin']);
             })
             .catch(this.handleError)
 
