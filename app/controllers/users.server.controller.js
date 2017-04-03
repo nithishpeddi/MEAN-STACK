@@ -49,6 +49,7 @@ exports.signin = function (req, res, next) {
     })(req, res, next);
 };
 exports.signup = function (req, res) {
+    console.log('signout working')
     const user = new User(req.body);
     user.provider = 'local';
     user.save((err) => {

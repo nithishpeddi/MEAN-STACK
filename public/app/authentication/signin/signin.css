@@ -21,7 +21,8 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    margin-left: 15%;
+    width: 20%;
 }
 
 /* Add a hover effect for buttons */
@@ -30,11 +31,7 @@ button:hover {
 }
 
 /* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
+
 
 /* Center the avatar image inside this container */
 .imgcontainer {
@@ -50,7 +47,7 @@ img.avatar {
 
 /* Add padding to containers */
 .container {
-    padding: 16px;
+    padding: 8px;
 }
 
 /* The "Forgot password" text */
@@ -68,5 +65,39 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
+}
+
+
+
+
+.nav{
+    margin-top:167px;
+    width:1024px;
+    height:34px;
+}
+.container-fluid{
+    background-image: -webkit-image-set();
+}
+/* Centers the div that nests the nav_buttons */
+.centerButtons {
+    margin:  auto;
+    float: left;
+} 
+
+.nav_button{
+    height:34px;
+    margin-right:10px;
+    float: left;
+}
+.wrapper{
+    text-align: absolute;
+    top:50%;
+    align-self: center;
+}
+.form-actions {
+    margin: 3%;
+    background-color: transparent;
+    text-align: center;
+    width: 170%;
 }
 

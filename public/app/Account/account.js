@@ -16,6 +16,10 @@ var AccountComponent = (function () {
         this._authenticationService = _authenticationService;
         this.user = _authenticationService.user;
     }
+    AccountComponent.prototype.signout = function () {
+        console.log('signout');
+        this._authenticationService.signout().subscribe();
+    };
     return AccountComponent;
 }());
 AccountComponent = __decorate([

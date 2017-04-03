@@ -1,21 +1,46 @@
-<h1>New Article</h1>
-<form (ngSubmit)="create()" novalidate>
+<form class="form-control" (ngSubmit)="create()" novalidate>
+
+    <h1>Interviewer Details</h1>
+    <h3>Section-1</h3>
+
+
     <div class="row">
-        <label for="title">Title</label>
-        <div>
-            <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Title">
+        <ul>
+            <li> What is the most significant project or suggestion you initiated in your career?</li>
+            <li> Now tell me about a significant project or suggestion in each of your positions</li>
+        </ul>
+    </div>
+    <!--<h2>
+        <div id="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
         </div>
-    </div>
+    </h2>-->
+    <!--<md-card class="Rating" color="primary">
+    <h2 class="example-h2" color="primary">Rating******</h2>
+    <md-slider class="example-margin" color="primary" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
+        [tick-interval]="tickInterval" [value]="value" [vertical]="vertical">
+        </md-slider>
+</md-card>-->
+
+    <h3><label for="title">Title</label></h3>
+    <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Employee Name">
+
+    <h1><label for="content">Comments</label></h1>
     <div>
-        <label for="content">Content</label>
-        <div>
-            <textarea type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
-        </div>
+        <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
     </div>
-    <div>
-        <input type="submit">
+    <button class="btn-lg btn-success" type="submit">submit</button>
+    <strong id="error">{{errorMessage}}</strong>
+
+
+    <div class="container text-right">
+
+        <a role="button" routerLink="/articles/create/interview" routerLinkActive="active" class="btn btn-primary btn-lg">Next Page</a>
+        <a role="button" routerLink="/articles" routerLinkActive="active" class="btn btn-warning btn-lg">Back Page</a>
+
     </div>
-    <strong id="error">
-{{errorMessage}}
-</strong>
-    </form>
+    <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
+    <h4>Page No 1</h4>
+</form>
+
+<router-outlet></router-outlet>

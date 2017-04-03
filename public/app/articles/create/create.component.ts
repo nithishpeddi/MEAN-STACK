@@ -3,13 +3,14 @@ import { Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'create',
-    templateUrl: 'app/articles/create/create.template.html'
+    templateUrl: './create.template.html',
+    styleUrls: ['./create.css']
 })
 export class CreateComponent {
-    article: any = {};
+
+    article:any = {};
     errorMessage: string;
-    constructor(private _router: Router,
-        private _articlesService: ArticlesService) { }
+    constructor(private _router: Router,private _articlesService: ArticlesService) { }
     create() {
         this._articlesService
             .create(this.article)
@@ -18,3 +19,4 @@ export class CreateComponent {
             error => this.errorMessage = error);
     }
 }
+

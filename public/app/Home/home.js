@@ -9,7 +9,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var HomeComponent = (function () {
     function HomeComponent() {
+        this.birthday = new Date(); // April 15, 1988
+        this.toggle = true;
     }
+    Object.defineProperty(HomeComponent.prototype, "format", {
+        // shortDate = true;
+        get: function () { return this.toggle ? 'shortDate' : 'fullDate'; },
+        enumerable: true,
+        configurable: true
+    });
+    HomeComponent.prototype.toggleFormat = function () { this.toggle = !this.toggle; };
     return HomeComponent;
 }());
 HomeComponent = __decorate([

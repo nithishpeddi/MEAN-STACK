@@ -8,6 +8,8 @@ var account_1 = require("../Account/account");
 var signup_component_1 = require("../authentication/signup/signup.component");
 var home_1 = require("../Home/home");
 var signin_component_1 = require("../authentication/signin/signin.component");
+var interview_1 = require("../articles/create/interview/interview");
+var Level1_1 = require("../articles/create/LevelOne/Level1");
 exports.AppRoutes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
     { path: 'Home', component: home_1.HomeComponent },
@@ -23,7 +25,13 @@ exports.AppRoutes = [
         children: [
             // { path: '', component: ArticlesComponent },
             { path: '', component: list_component_1.ListComponent },
-            { path: 'create', component: create_component_1.CreateComponent },
+            {
+                path: 'create', children: [
+                    { path: '', component: create_component_1.CreateComponent },
+                    { path: 'interview', component: interview_1.InterviewComponent },
+                    { path: 'LevelOne', component: Level1_1.Level1Component },
+                ]
+            },
             { path: ':articleId', component: view_component_1.ViewComponent },
             { path: ':articleId/edit', component: edit_component_1.EditComponent },
         ]

@@ -1,19 +1,35 @@
- <div class="account col-sm-2">
-        <b>Do you have an account ?? <h2>Create One</h2></b>
+<form class="form-container" >
+    <div class="account col-sm-4">
         <div class="container">
+
             <div *ngIf="!user">
+                <b>Do you have an account ?? <h2>Create One</h2></b>
                 <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signup']">Signup</button>
                 <button type="submit" class="btn btn-primary btn-lg" [routerLink]="['/authentication/signin']">Signin</button>
             </div>
         </div>
     </div>
+</form>
+
+<form (ngSubmit)="signout()" novalidate>
     <div *ngIf="user">
         <h1>Hello {{user.firstName}}</h1>
-        <a href="/api/auth/signout">Signout</a>
-        <ul>
-            <li><a [routerLink]="['/articles']">List Articles</a></li>
-            <li><a [routerLink]="['/articles/create']">Create Article</a></li>
-            <li><a [routerLink]="['/articles/edit']"> Edit Article</a></li>
+        <table class="table">
+            <ul>
+                <li>
+                    <p><a [routerLink]="['/articles']">List Articles</a></p>
+                </li>
+                <li>
+                    <p><a [routerLink]="['/articles/create']">Create Article</a></p>
+                </li>
+                <li><p><a [routerLink]="['/articles/edit']"> Edit Article</a></p></li>
 
-        </ul>
-    <router-outlet></router-outlet>
+            </ul>
+        </table>
+
+
+        <button type="submit" class="btn-primary btn-lg">Signout</button>
+    </div>
+</form>
+
+<router-outlet></router-outlet>

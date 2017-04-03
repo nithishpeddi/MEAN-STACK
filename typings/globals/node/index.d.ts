@@ -360,7 +360,7 @@ declare namespace NodeJS {
         };
         kill(pid: number, signal?: string | number): void;
         pid: number;
-        title: string;
+        Employee Name: string;
         arch: string;
         platform: string;
         mainModule?: NodeModule;

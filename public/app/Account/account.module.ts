@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import{MaterialModule} from '@angular/material';
 
 import{AccountComponent} from '../Account/account';
 
@@ -9,7 +10,7 @@ import{AccountComponent} from '../Account/account';
     imports: [
         CommonModule,
         FormsModule,
-        RouterModule
+        RouterModule,MaterialModule
     ],
     declarations: [
         AccountComponent

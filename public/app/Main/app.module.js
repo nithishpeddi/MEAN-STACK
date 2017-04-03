@@ -23,6 +23,8 @@ var authentication_module_1 = require("../authentication/authentication.module")
 var material_1 = require("@angular/material");
 var articles_module_1 = require("../articles/articles.module");
 var account_module_1 = require("../Account/account.module");
+var interview_module_1 = require("../articles/create/interview/interview.module");
+var Level1_module_1 = require("../articles/create/LevelOne/Level1.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +37,7 @@ AppModule = __decorate([
             http_1.HttpModule,
             router_1.RouterModule.forRoot(app_routes_1.AppRoutes),
             forms_1.FormsModule,
-            authentication_module_1.AuthenticationModule, material_1.MaterialModule, account_module_1.AccountModule, articles_module_1.ArticlesModule
+            authentication_module_1.AuthenticationModule, material_1.MaterialModule, account_module_1.AccountModule, articles_module_1.ArticlesModule, interview_module_1.InterviewAppModule, Level1_module_1.Level1AppModule
         ],
         exports: [
             router_1.RouterModule

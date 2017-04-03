@@ -9,6 +9,8 @@ import { SignupComponent } from '../authentication/signup/signup.component';
 import { HomeComponent } from '../Home/home';
 import { SigninComponent } from '../authentication/signin/signin.component';
 import { ArticlesComponent } from '../articles/articles.component';
+import { InterviewComponent } from '../articles/create/interview/interview';
+import{Level1Component} from '../articles/create/LevelOne/Level1'
 export const AppRoutes: Routes = [
 
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -25,7 +27,13 @@ export const AppRoutes: Routes = [
         children: [
             // { path: '', component: ArticlesComponent },
             { path: '', component: ListComponent },
-            { path: 'create', component: CreateComponent },
+            {
+                path: 'create', children: [
+                    {path:'', component: CreateComponent },
+                    { path: 'interview', component: InterviewComponent },
+                    {path:'LevelOne',component:Level1Component},
+                ]
+            },
             { path: ':articleId', component: ViewComponent },
             { path: ':articleId/edit', component: EditComponent },
         ]

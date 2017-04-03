@@ -8,13 +8,9 @@
         <label>Password:</label>
         <input type="password" [(ngModel)]="credentials.password" name="password" placeholder="Password">
     </div>
-    <div>
-        <button type="submit" value="Sign In">sign in </button>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn" (click)="cancel()">Cancel</button>
-        <input type="checkbox" checked="checked"> Remember me..!
-        <span class="psw">Forgot <a href="#">password?</a></span>
+  
+    <div class="container text-center">
+        <button type="submit" class="btn btn-danger btn-lg" value="Sign In">Sign In</button>
     </div>
     <span>{{errorMessage}}</span>
 </form>

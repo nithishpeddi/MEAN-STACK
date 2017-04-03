@@ -13,12 +13,15 @@ require("rxjs/Rx");
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var Observable_1 = require("rxjs/Observable");
+var router_1 = require("@angular/router");
 var AuthenticationService = (function () {
-    function AuthenticationService(http) {
+    function AuthenticationService(http, _router) {
         this.http = http;
+        this._router = _router;
         this.user = window['user'];
         this._signinURL = 'api/auth/signin';
         this._signupURL = 'api/auth/signup';
+        this._signoutURL = 'api/auth/signout';
     }
     AuthenticationService.prototype.isLoggedIn = function () {
         return (!!this.user);
@@ -45,11 +48,20 @@ var AuthenticationService = (function () {
         console.error(error);
         return Observable_1.Observable.throw(error.json().message || 'Server error');
     };
+    AuthenticationService.prototype.signout = function () {
+        var _this = this;
+        return this.http.get(this._signoutURL)
+            .map(function () {
+            console.log('map');
+            _this._router.navigate(['/articles/signin']);
+        })
+            .catch(this.handleError);
+    };
     return AuthenticationService;
 }());
 AuthenticationService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
+    __metadata("design:paramtypes", [http_1.Http, router_1.Router])
 ], AuthenticationService);
 exports.AuthenticationService = AuthenticationService;
 //# sourceMappingURL=authentication.service.js.map

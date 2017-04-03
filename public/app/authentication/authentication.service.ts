@@ -2,13 +2,16 @@ import 'rxjs/Rx';
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 @Injectable()
 export class AuthenticationService {
     public user = window['user'];
     private _signinURL = 'api/auth/signin';
     private _signupURL = 'api/auth/signup';
-    constructor(private http: Http) {
+    private _signoutURL = 'api/auth/signout';
+    constructor(private http: Http, private _router: Router) {
     }
+
     isLoggedIn(): boolean {
         return (!!this.user);
     }
@@ -31,5 +34,14 @@ export class AuthenticationService {
     private handleError(error: Response) {
         console.error(error);
         return Observable.throw(error.json().message || 'Server error');
+    }
+    signout() {
+        return this.http.get(this._signoutURL)
+            .map(() => {
+                console.log('map')
+                this._router.navigate(['/articles/signin']);
+            })
+            .catch(this.handleError)
+
     }
 }

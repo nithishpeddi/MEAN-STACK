@@ -8,9 +8,16 @@ import { AuthenticationService } from '../authentication/authentication.service'
     styleUrls: ['app/Account/account.css']
 })
 export class AccountComponent {
+
     user: any;
+
     constructor(private _authenticationService: AuthenticationService) {
         this.user = _authenticationService.user;
     }
 
+    signout() {
+        console.log('signout')
+        this._authenticationService.signout().subscribe();
+
+    }
 }

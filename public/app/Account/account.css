@@ -1,0 +1,32 @@
+table{
+    align-content: center;
+    color: red;
+    margin-left: 15%
+    
+}
+items{
+    font-size:29px;
+}
+button{
+margin-left: 35%;
+margin-top: 10%;
+}
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+form-container{
+    padding-left:5%;
+}
+p{
+    font-size: 24px;
+    font-style: normal;
+}

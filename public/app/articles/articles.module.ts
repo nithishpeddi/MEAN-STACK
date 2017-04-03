@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ArticlesService } from '../articles/articles.service';
 import { ArticlesComponent } from './articles.component';
+import{MaterialModule} from '@angular/material';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        RouterModule
+        RouterModule,MaterialModule
     ],
     declarations: [
         ArticlesComponent,

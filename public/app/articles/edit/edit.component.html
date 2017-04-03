@@ -1,7 +1,8 @@
-<h1>Edit Article</h1>
-<form (ngSubmit)="update()" novalidate>
+<form class="form-control" (ngSubmit)="update()" novalidate>
+    <br>
+    <h1>Edit Article</h1>
     <div>
-        <label for="title">Title</label>
+      <h2>  <label for="title">Employee Name</label></h2>
         <div>
             <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Title">
         </div>
@@ -9,11 +10,11 @@
     <div>
         <label for="content">Content</label>
         <div>
-            <textarea type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
+            <textarea type="text" required cols="80" rows="18" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
         </div>
     </div>
     <div>
-        <input type="submit" value="Update">
+        <input class="btn-lg btn-info" type="submit" value="Update">
     </div>
     <strong>
 {{errorMessage}}

@@ -1,0 +1,45 @@
+
+<form class="form-control" (ngSubmit)="create()" novalidate>
+    <div>
+        <h1>Interviewer Details</h1>
+        <h3>Section-2</h3>
+    </div>
+
+    <div class="row">
+        <ul>
+            <li> Please tell me about your most successful attempt to encourage others to take action and get the job done ?</li>
+            <li> Now give me examples of how you did this in each of your positions?
+            </li>
+        </ul>
+    </div>
+    <h2>
+        <div class="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+    </h2>
+    <md-card class="Rating" color="primary">
+        <h2 class="example-h2" color="primary">Rating******</h2>
+        <md-slider class="example-margin" color="primary" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
+            [tick-interval]="tickInterval" [value]="value" [vertical]="vertical">
+            </md-slider>
+    </md-card>
+    <form>
+        <h3><label for="title">Employee Name</label></h3>
+        <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Title">
+    </form>
+    <h1><label for="content">Comments</label></h1>
+    <div>
+        <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
+    </div><button class="btn-primary" type="submit">submit</button>
+    <strong id="error">{{errorMessage}}</strong>
+
+
+    <div class="container text-right">
+
+        <a role="button" routerLink="/articles/create/LevelOne" routerLinkActive="active" class="btn btn-primary btn-lg">Next Page</a>
+        <a role="button" routerLink="" routerLinkActive="active" class="btn btn-warning btn-lg">Back Page</a>
+
+    </div>
+    <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
+    <h4>Page No 1</h4>
+<router-outlet></router-outlet>

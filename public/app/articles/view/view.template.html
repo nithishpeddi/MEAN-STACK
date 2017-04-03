@@ -1,19 +1,22 @@
-<section *ngIf="article && article.creator">
-    <h1>
-        {{article.title}}
-    </h1>
-    <div *ngIf="allowEdit">
-        <a [routerLink]="['/articles', article._id, 'edit']">edit</a>
-        <button (click)="delete()">delete</button>
+<table>
+
+
+    <div *ngIf="article && article.creator">
+        <h1>
+           Employee Name: {{article.title}}
+        </h1>
+         <h3>
+            {{article.content}}
+        </h3>
+
+        <h2>Posted on {{article.created}} by {{article.creator.fullName}}</h2>
+         <div class="col-sm-4" *ngIf="allowEdit">
+            <button class="btn btn-warning" [routerLink]="['/articles', article._id, 'edit']">Edit</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-info" (click)="delete()">delete</button>
+        </div>
+
+      
     </div>
-    <small>
-<em>Posted on
-{{article.created}}
-by
-{{article.creator.fullName}}
-</em>
-</small>
-    <p>
-        {{article.content}}
-    </p>
-</section>
+</table>
