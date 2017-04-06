@@ -1,4 +1,4 @@
-<form>
+
     <div>
         <h3>Section-3</h3>
     </div>
@@ -10,29 +10,23 @@
             </li>
         </ul>
     </div>
- <h2> <div class="rating">
-<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-</div></h2>
-    <md-card class="Rating" color="primary">
-        <h2 class="example-h2" color="primary">Rating******</h2>
- 
-        <md-slider class="example-margin" color="primary" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
-            [tick-interval]="tickInterval" [value]="value" [vertical]="vertical">
-            </md-slider>
-    </md-card>
-    <div class="row">
-        <h1>Comments</h1>
-        <textarea class="form-control" rows="10">
-        Wirte Here.....!</textarea>
-    </div>
-    <div class="container text-center">
-        <button type="button" class="btn btn-success btn-lg" (click)="Save()"> Save</button>
-        <button type="button" class="btn btn-danger btn-lg" (click)="Cancel()"> Cancel</button>
-    </div>
-    <div class="container text-right">
-        <a type="button" routerLink="" routerLinkActive="active" class="btn btn-primary btn-lg">Next Page</a>
-        <a type="button" routerLink="/create/interview" routerLinkActive="active" class="btn btn-warning btn-lg">Back</a>
-    </div>
-    <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-    <h4>Page No 3</h4>
-</form>
+    <div *ngIf="article">
+        <h1>
+            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i> Employee Name: {{article.title}}
+        </h1>
+              <h1><label for="content">Comments</label></h1>
+    
+            <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
+        </div>
+        <a role="button" value="Update" (click)="update(article.id)">update</a>
+        <strong id="error">{{errorMessage}}</strong>
+
+        <div class="container text-right">
+      
+            <a type="button" routerLink="/Account" routerLinkActive="active" class="btn btn-warning btn-lg">Finish</a>
+        </div>
+
+        <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
+        <h4>Page No 3</h4>
+
+<router-outlet></router-outlet>

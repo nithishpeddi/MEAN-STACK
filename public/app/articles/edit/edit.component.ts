@@ -24,9 +24,10 @@ export class EditComponent {
     ngOnDestroy() {
         this.paramsObserver.unsubscribe();
     }
-    update() {
+    update(id:string) {
+        console.log('update is wroking')
         this._articlesService.update(this.article).subscribe(savedArticle =>
-            this._router.navigate(['/articles', savedArticle._id]),
+            this._router.navigate(['/articles/view/${id}']),
             error => this.errorMessage = error);
     }
 }

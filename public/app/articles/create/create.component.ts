@@ -14,8 +14,7 @@ export class CreateComponent {
     create() {
         this._articlesService
             .create(this.article)
-            .subscribe(createdArticle => this._router.navigate(['/articles',
-                createdArticle._id]),
+            .subscribe(createdArticle => this._router.navigate([`/articles/view/${createdArticle._id}`]),
             error => this.errorMessage = error);
     }
 }

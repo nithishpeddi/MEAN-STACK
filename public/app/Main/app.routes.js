@@ -23,17 +23,16 @@ exports.AppRoutes = [
     {
         path: 'articles',
         children: [
-            // { path: '', component: ArticlesComponent },
             { path: '', component: list_component_1.ListComponent },
             {
                 path: 'create', children: [
                     { path: '', component: create_component_1.CreateComponent },
-                    { path: 'interview', component: interview_1.InterviewComponent },
-                    { path: 'LevelOne', component: Level1_1.Level1Component },
+                    { path: 'interview/:articleId', component: interview_1.InterviewComponent },
+                    { path: 'LevelOne/:articleId', component: Level1_1.Level1Component },
                 ]
             },
-            { path: ':articleId', component: view_component_1.ViewComponent },
-            { path: ':articleId/edit', component: edit_component_1.EditComponent },
+            { path: 'view/:articleId', component: view_component_1.ViewComponent },
+            { path: 'edit/:articleId', component: edit_component_1.EditComponent }
         ]
     },
 ];

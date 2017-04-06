@@ -1,32 +1,47 @@
 import { Component } from '@angular/core';
-
-
+import { Router, ActivatedRoute } from '@angular/router';
+import { ArticlesService } from '../../articles.service';
+import { AuthenticationService } from '../../../authentication/authentication.service';
+import { CommonModule } from '@angular/common';
 @Component({
 
     templateUrl: './interview.html',
+    styleUrls: ['./interview.css']
 })
 export class InterviewComponent {
-    color = 'accent';
-    checked = false;
-    disabled = false;
-    autoTicks = false;
-
-    invert = false;
-    max = 5;
-    min = 0;
-    showTicks = true;
-    step = 1;
-    thumbLabel = true;
-    value = 0;
-    vertical = false;
-
-    get tickInterval(): number | 'auto' {
-        return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : null;
+    user: any;
+    article: any;
+    paramsObserver: any;
+    errorMessage: string;
+    allowEdit: boolean = false;
+    constructor(private _router: Router,
+        private _route: ActivatedRoute,
+        private _authenticationService: AuthenticationService,
+        private _articlesService: ArticlesService) { }
+    update(id: string) {
+        console.log('update is wroking')
+        this._articlesService.update(this.article).subscribe(savedArticle =>
+            this._router.navigate(['/articles/view/${id}']),
+            error => this.errorMessage = error);
     }
-    set tickInterval(v) {
-        this._tickInterval = Number(v);
+     next(id: string) {
+        this._router.navigate([`/articles/create/LevelOne/${id}`])
     }
-    private _tickInterval = 1;
+    ngOnInit() {
+        this.user = this._authenticationService.user
+        this.paramsObserver = this._route.params.subscribe(params => {
+            let articleId = params['articleId'];
+            this._articlesService
+                .read(articleId)
+                .subscribe(
+                article => {
+                    this.article = article;
+                    this.allowEdit = (this.user && this.user._id === this.article.creator._id);
+                },
+                error => this._router.navigate(['/articles'])
+                );
+        });
+    }
 
 
 }

@@ -5,6 +5,7 @@ import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'view',
     templateUrl: 'app/articles/view/view.template.html',
+    styleUrls: ['app/articles/view/view.css']
 })
 export class ViewComponent {
     user: any;
@@ -16,6 +17,13 @@ export class ViewComponent {
         private _route: ActivatedRoute,
         private _authenticationService: AuthenticationService,
         private _articlesService: ArticlesService) { }
+
+    next(id: string) {
+        this._router.navigate([`/articles/create/interview/${id}`])
+    }
+     edit(id: string) {
+        this._router.navigate([`/articles/edit/${id}`]);
+    }
     ngOnInit() {
         this.user = this._authenticationService.user
         this.paramsObserver = this._route.params.subscribe(params => {
@@ -37,7 +45,7 @@ export class ViewComponent {
     }
     delete() {
         this._articlesService.delete(this.article._id).subscribe(deletedArticle =>
-            this._router.navigate(['/articles']),
+            this._router.navigate(['/articles/']),
             error => this.errorMessage = error);
     }
 }

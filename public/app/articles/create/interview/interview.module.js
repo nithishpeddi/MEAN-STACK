@@ -11,6 +11,7 @@ var interview_1 = require("./interview");
 var material_1 = require("@angular/material");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
+var common_1 = require("@angular/common");
 var InterviewAppModule = (function () {
     function InterviewAppModule() {
     }
@@ -21,7 +22,7 @@ InterviewAppModule = __decorate([
         declarations: [
             interview_1.InterviewComponent
         ],
-        imports: [router_1.RouterModule, material_1.MaterialModule, forms_1.FormsModule],
+        imports: [router_1.RouterModule, material_1.MaterialModule, forms_1.FormsModule, common_1.CommonModule],
     })
 ], InterviewAppModule);
 exports.InterviewAppModule = InterviewAppModule;

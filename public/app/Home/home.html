@@ -10,10 +10,20 @@
             </md-card-header>
             <img md-card-image src="./assets/jhoncage.jpg"> </md-card>
         <ul>
-            <li><h4> Work: Vice President</h4></li>
-            <li><h4>Family: Recruitment</h4></li>
-            <li><h4>Location: Greater St. Louis Area</h4></li>
-            <li><h4>Email: <u>johnc@johncage-ent.com</u></h4></li>
+            <li>
+                <h4> Work: Vice President</h4>
+            </li>
+            <li>
+                <h4>Family: Recruitment</h4>
+            </li>
+            <li>
+                <h4>Location: Greater St. Louis Area</h4>
+            </li>
+            <li>
+                <h4>Email:
+                    <u>johnc@johncage-ent.com</u>
+                </h4>
+            </li>
         </ul>
 
     </div>
@@ -38,33 +48,34 @@
     <div class="last col-sm-5">
         <p>Todays Date {{ birthday | date:format }}</p>
         <button class="btn-warning btn-lg" (click)="toggleFormat()">click</button>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
         <h2>Knowledge Check Preferred Channels</h2>
         <div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-  aria-valuemin="0" aria-valuemax="100" style="width:40%">
-    40% 
-  </div>
-</div>
-<h2>Boolean Knowledge</h2>
-<div class="progress">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
-  aria-valuemin="0" aria-valuemax="100" style="width:50%">
-    50%  
-  </div>
-</div>
-<h2>Social Media Knowledge</h2>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-  aria-valuemin="0" aria-valuemax="100" style="width:60%">
-    60% 
-  </div>
-</div>
-<h2>Proactive Knowledge</h2>
-<div class="progress">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:70%">
-    70%  
-  </div>
-</div>
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                style="width:40%">
+                40%
+        </div>
+    </div>
+    <h2>Boolean Knowledge</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50%
+        </div>
+    </div>
+    <h2>Social Media Knowledge</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+            style="width:60%">
+            60%
+    </div>
+    </div>
+    <h2>Proactive Knowledge</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            style="width:70%">
+            70%
+    </div>
+    </div>
     </div>
 </form>

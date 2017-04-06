@@ -1,4 +1,4 @@
-<form class="form-control" (ngSubmit)="update()" novalidate>
+<form class="form-control">
     <br>
     <h1>Edit Article</h1>
     <div>
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div>
-        <input class="btn-lg btn-info" type="submit" value="Update">
+        <a  role="button" value="Update" (click)="update(article.id)">update</a>
     </div>
     <strong>
 {{errorMessage}}

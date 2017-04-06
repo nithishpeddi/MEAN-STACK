@@ -1,29 +1,21 @@
 <form class="form-control" (ngSubmit)="create()" novalidate>
-
     <h1>Interviewer Details</h1>
     <h3>Section-1</h3>
 
 
     <div class="row">
         <ul>
-            <li> What is the most significant project or suggestion you initiated in your career?</li>
-            <li> Now tell me about a significant project or suggestion in each of your positions</li>
+            <li><b> What is the most significant project or suggestion you initiated in your career?</b></li>
+            <li><b> Now tell me about a significant project or suggestion in each of your positions </b></li>
         </ul>
     </div>
-    <!--<h2>
-        <div id="rating">
-            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-        </div>
-    </h2>-->
-    <!--<md-card class="Rating" color="primary">
-    <h2 class="example-h2" color="primary">Rating******</h2>
-    <md-slider class="example-margin" color="primary" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [thumb-label]="thumbLabel"
-        [tick-interval]="tickInterval" [value]="value" [vertical]="vertical">
-        </md-slider>
-</md-card>-->
 
-    <h3><label for="title">Title</label></h3>
-    <input type="text" required [(ngModel)]="article.title" name="title" placeholder="Employee Name">
+    <form class="form-inline">
+        <div class="form-group">
+            <h3><label for="title">Employee Name </label></h3>
+            <input type="text" class="form-control" required [(ngModel)]="article.title" name="title" placeholder="Ex:Joe goy">
+        </div>
+    </form>
 
     <h1><label for="content">Comments</label></h1>
     <div>
@@ -31,14 +23,6 @@
     </div>
     <button class="btn-lg btn-success" type="submit">submit</button>
     <strong id="error">{{errorMessage}}</strong>
-
-
-    <div class="container text-right">
-
-        <a role="button" routerLink="/articles/create/interview" routerLinkActive="active" class="btn btn-primary btn-lg">Next Page</a>
-        <a role="button" routerLink="/articles" routerLinkActive="active" class="btn btn-warning btn-lg">Back Page</a>
-
-    </div>
     <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
     <h4>Page No 1</h4>
 </form>

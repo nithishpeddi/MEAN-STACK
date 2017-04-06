@@ -21,6 +21,12 @@ var ViewComponent = (function () {
         this._articlesService = _articlesService;
         this.allowEdit = false;
     }
+    ViewComponent.prototype.next = function (id) {
+        this._router.navigate(["/articles/create/interview/" + id]);
+    };
+    ViewComponent.prototype.edit = function (id) {
+        this._router.navigate(["/articles/edit/" + id]);
+    };
     ViewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.user = this._authenticationService.user;
@@ -41,7 +47,7 @@ var ViewComponent = (function () {
     ViewComponent.prototype.delete = function () {
         var _this = this;
         this._articlesService.delete(this.article._id).subscribe(function (deletedArticle) {
-            return _this._router.navigate(['/articles']);
+            return _this._router.navigate(['/articles/']);
         }, function (error) { return _this.errorMessage = error; });
     };
     return ViewComponent;
@@ -50,6 +56,7 @@ ViewComponent = __decorate([
     core_1.Component({
         selector: 'view',
         templateUrl: 'app/articles/view/view.template.html',
+        styleUrls: ['app/articles/view/view.css']
     }),
     __metadata("design:paramtypes", [router_1.Router,
         router_1.ActivatedRoute,

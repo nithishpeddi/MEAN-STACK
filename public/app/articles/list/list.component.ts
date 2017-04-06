@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'list',
@@ -7,7 +8,13 @@ import { ArticlesService } from '../articles.service';
 export class ListComponent {
     articles: any;
     errorMessage: string;
-    constructor(private _articlesService: ArticlesService) { }
+    constructor(private _router: Router,
+        private _articlesService: ArticlesService) { }
+
+    returnToArticle(id: string) {
+        this._router.navigate([`/articles/view/${id}`]);
+    }
+
     ngOnInit() {
         this._articlesService.list().subscribe(articles => this.articles = articles);
     }

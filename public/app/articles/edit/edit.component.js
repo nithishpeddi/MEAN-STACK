@@ -31,10 +31,11 @@ var EditComponent = (function () {
     EditComponent.prototype.ngOnDestroy = function () {
         this.paramsObserver.unsubscribe();
     };
-    EditComponent.prototype.update = function () {
+    EditComponent.prototype.update = function (id) {
         var _this = this;
+        console.log('update is wroking');
         this._articlesService.update(this.article).subscribe(function (savedArticle) {
-            return _this._router.navigate(['/articles', savedArticle._id]);
+            return _this._router.navigate(['/articles/view/${id}']);
         }, function (error) { return _this.errorMessage = error; });
     };
     return EditComponent;

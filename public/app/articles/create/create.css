@@ -24,3 +24,11 @@
   transform: rotateX(0deg);
   text-shadow: 0 0 30px #ffc;
 }
+button{
+  margin-top:5%;
+  margin-left: 33%;
+}
+b{
+  font-size: 30px;
+  color: lightblue;
+}

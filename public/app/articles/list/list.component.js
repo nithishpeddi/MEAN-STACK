@@ -10,11 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var articles_service_1 = require("../articles.service");
 var ListComponent = (function () {
-    function ListComponent(_articlesService) {
+    function ListComponent(_router, _articlesService) {
+        this._router = _router;
         this._articlesService = _articlesService;
     }
+    ListComponent.prototype.returnToArticle = function (id) {
+        this._router.navigate(["/articles/view/" + id]);
+    };
     ListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._articlesService.list().subscribe(function (articles) { return _this.articles = articles; });
@@ -26,7 +31,8 @@ ListComponent = __decorate([
         selector: 'list',
         templateUrl: 'app/articles/list/list.template.html'
     }),
-    __metadata("design:paramtypes", [articles_service_1.ArticlesService])
+    __metadata("design:paramtypes", [router_1.Router,
+        articles_service_1.ArticlesService])
 ], ListComponent);
 exports.ListComponent = ListComponent;
 //# sourceMappingURL=list.component.js.map
