@@ -1,9 +1,19 @@
-.button{
-    margin-top:10%;
+
+
+mark{
+    margin-left: 15%;
 }
-container{
-    margin-top:10%;
+button{
+  margin-top:4%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+ 
 }
-btn{
-    margin-top:5%;
+b{
+  font-size: 25px;
+  color:black
+}
+h3{
+  color: red;
+  font-family: sans-serif;
 }
