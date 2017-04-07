@@ -18,10 +18,10 @@ export class InterviewComponent {
         private _route: ActivatedRoute,
         private _authenticationService: AuthenticationService,
         private _articlesService: ArticlesService) { }
-    update(id: string) {
+    update() {
         console.log('update is wroking')
         this._articlesService.update(this.article).subscribe(savedArticle =>
-            this._router.navigate(['/articles/view/${id}']),
+            this._router.navigate([`/articles/view/${this.article._id}`]),
             error => this.errorMessage = error);
     }
      next(id: string) {

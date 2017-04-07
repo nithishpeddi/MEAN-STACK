@@ -1,9 +1,4 @@
-table{
-    align-content: center;
-    color: red;
-    margin-left: 15%
-    
-}
+
 items{
     font-size:29px;
 }
@@ -23,10 +18,32 @@ margin-top: 0%;
 .example-selected-value {
   margin: 15px 0;
 }
-form-container{
-    padding-left:5%;
-}
+
 p{
     font-size: 24px;
     font-style: normal;
+}
+.row{
+    background-color:lightgreen;
+    margin: 20%;
+}
+h2{
+    color:black;
+    font-family: bold;
+    font-synthesis: style;
+}
+md-card{
+    margin-top: 15%;
+    /*margin: 60px;*/
+    margin-left:35%
+    }
+    .btn {
+    margin-top: 0%;
+    margin-left: 40px;
+}
+.fa{
+    margin-left: 5%;
+}
+.btn{
+    margin-left:10px;
 }

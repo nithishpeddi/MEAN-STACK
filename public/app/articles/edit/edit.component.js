@@ -34,8 +34,9 @@ var EditComponent = (function () {
     EditComponent.prototype.update = function (id) {
         var _this = this;
         console.log('update is wroking');
+        console.log('id', id);
         this._articlesService.update(this.article).subscribe(function (savedArticle) {
-            return _this._router.navigate(['/articles/view/${id}']);
+            return _this._router.navigate(["/articles/view/" + id]);
         }, function (error) { return _this.errorMessage = error; });
     };
     return EditComponent;

@@ -1,25 +1,27 @@
 <table class="container">
     <div *ngIf="article && article.creator">
-       <h2>
+        <h2>
             <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Employee: {{article.title}}
         </h2>
         <h3>
-                 {{article.content}}
+            {{article.content}}
         </h3>
-<h5>Date {{article.created}} by {{article.creator.fullName}}</h5>
-        
-        
-        </div>
+        <h5>Date {{article.created}} by {{article.creator.fullName}}</h5>
 
-        <div class="col-sm-4" *ngIf="allowEdit">
-            <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>
-           
-        </div>
-        <div class="col-sm-3">
-            <button class="btn btn-info" (click)="delete()">delete</button></div>
-<div class="col-sm-4">
-            <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
 
-        </div>
+    </div>
+
+    <div class="col-sm-4" *ngIf="allowEdit">
+        <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>
+
+    </div>
+    <div class="col-sm-3">
+
+
+        <button class="btn btn-info" (click)="delete()"> <i class="fa fa-trash-o fa-lg "></i> Delete</button></div>
+    <div class="col-sm-4">
+        <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
+
+    </div>
 </table>
 <router-outlet></router-outlet>

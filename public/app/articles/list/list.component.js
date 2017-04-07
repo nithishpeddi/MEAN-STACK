@@ -29,7 +29,8 @@ var ListComponent = (function () {
 ListComponent = __decorate([
     core_1.Component({
         selector: 'list',
-        templateUrl: 'app/articles/list/list.template.html'
+        templateUrl: 'app/articles/list/list.template.html',
+        styleUrls: ['app/articles/list/list.css']
     }),
     __metadata("design:paramtypes", [router_1.Router,
         articles_service_1.ArticlesService])

@@ -21,11 +21,11 @@ var InterviewComponent = (function () {
         this._articlesService = _articlesService;
         this.allowEdit = false;
     }
-    InterviewComponent.prototype.update = function (id) {
+    InterviewComponent.prototype.update = function () {
         var _this = this;
         console.log('update is wroking');
         this._articlesService.update(this.article).subscribe(function (savedArticle) {
-            return _this._router.navigate(['/articles/view/${id}']);
+            return _this._router.navigate(["/articles/view/" + _this.article._id]);
         }, function (error) { return _this.errorMessage = error; });
     };
     InterviewComponent.prototype.next = function (id) {

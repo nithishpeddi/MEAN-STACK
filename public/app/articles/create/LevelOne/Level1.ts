@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
 
     templateUrl: './Level1.html',
-    //   styleUrls: []
+    styleUrls: ['Level1.css']
 })
 export class Level1Component {
      user: any;
@@ -20,10 +20,10 @@ export class Level1Component {
         private _route: ActivatedRoute,
         private _authenticationService: AuthenticationService,
         private _articlesService: ArticlesService) { }
-    update(id: string) {
-        console.log('update2 is wroking')
+     update() {
+        console.log('update is wroking')
         this._articlesService.update(this.article).subscribe(savedArticle =>
-            this._router.navigate(['/articles/LevelOne/${id}']),
+            this._router.navigate([`/articles/view/${this.article._id}`]),
             error => this.errorMessage = error);
     }
     ngOnInit() {

@@ -1,8 +1,12 @@
-/* Bordered form */
+ Bordered form 
 form {
     border: 3px solid #f1f1f1;
 }
-
+.row{
+    margin-left: 33%;
+    margin-top: 8%;
+  
+}
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
@@ -68,7 +72,9 @@ span.psw {
 }
 
 
-
+.btn{
+    margin-left: 30%;
+}
 
 .nav{
     margin-top:167px;

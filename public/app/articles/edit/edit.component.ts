@@ -26,8 +26,9 @@ export class EditComponent {
     }
     update(id:string) {
         console.log('update is wroking')
+        console.log('id', id)
         this._articlesService.update(this.article).subscribe(savedArticle =>
-            this._router.navigate(['/articles/view/${id}']),
+            this._router.navigate([`/articles/view/${id}`]),
             error => this.errorMessage = error);
     }
 }

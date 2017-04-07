@@ -1,5 +1,5 @@
-
-    <div>
+<form class="form-control" (ngSubmit)="update()" novalidate>
+        <div>
         <h3>Section-3</h3>
     </div>
 
@@ -17,16 +17,17 @@
               <h1><label for="content">Comments</label></h1>
     
             <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
+        
         </div>
-        <a role="button" value="Update" (click)="update(article.id)">update</a>
-        <strong id="error">{{errorMessage}}</strong>
+      
 
         <div class="container text-right">
-      
-            <a type="button" routerLink="/Account" routerLinkActive="active" class="btn btn-warning btn-lg">Finish</a>
+      <button class="btn btn-primary btn-lg" value="Back" type="submit" routerLink="/articles/create/interview" routerLinkActive="active">Back</button>
+            <!--<a type="button" routerLink="/Account" routerLinkActive="active" class="btn btn-warning btn-lg">Finish</a>-->
+            <button type="submit" class=" btn btn-info btn-lg" value="Update" (click)="update()">update</button> 
         </div>
-
+    <strong id="error">{{errorMessage}}</strong>
         <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-        <h4>Page No 3</h4>
+</form>
 
 <router-outlet></router-outlet>

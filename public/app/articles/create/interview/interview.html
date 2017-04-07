@@ -20,14 +20,16 @@
         <h1><label for="content">Comments</label></h1>
         <div>
             <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
-        </div> 
-        <a role="button" value="Update" (click)="update(article.id)">update</a>
-        <strong id="error">{{errorMessage}}</strong>
-        <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-info" value="Update" (click)="update()">update</button>
 
-    </div>
+            <button class="btn btn-danger" (click)="next(article._id)">Next Section </button>
+            <strong id="error">{{errorMessage}}</strong>
+        </div>
+        <br>
         <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-        <h4>Page No 2</h4>
-        <table>
 
-     <router-outlet></router-outlet>
+
+
+        <router-outlet></router-outlet>

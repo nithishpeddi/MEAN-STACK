@@ -21,11 +21,11 @@ var Level1Component = (function () {
         this._articlesService = _articlesService;
         this.allowEdit = false;
     }
-    Level1Component.prototype.update = function (id) {
+    Level1Component.prototype.update = function () {
         var _this = this;
-        console.log('update2 is wroking');
+        console.log('update is wroking');
         this._articlesService.update(this.article).subscribe(function (savedArticle) {
-            return _this._router.navigate(['/articles/LevelOne/${id}']);
+            return _this._router.navigate(["/articles/view/" + _this.article._id]);
         }, function (error) { return _this.errorMessage = error; });
     };
     Level1Component.prototype.ngOnInit = function () {
@@ -46,6 +46,7 @@ var Level1Component = (function () {
 Level1Component = __decorate([
     core_1.Component({
         templateUrl: './Level1.html',
+        styleUrls: ['Level1.css']
     }),
     __metadata("design:paramtypes", [router_1.Router,
         router_1.ActivatedRoute,

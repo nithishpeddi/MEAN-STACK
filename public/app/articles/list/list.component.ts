@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'list',
-    templateUrl: 'app/articles/list/list.template.html'
+    templateUrl: 'app/articles/list/list.template.html',
+    styleUrls:['app/articles/list/list.css']
 })
 export class ListComponent {
     articles: any;
