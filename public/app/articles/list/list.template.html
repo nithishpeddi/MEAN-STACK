@@ -5,8 +5,7 @@
         <md-card *ngFor="let article of	articles;let i=index">
             <h3> <a role="button" (click)="returnToArticle(article._id)">{{i+1}}.{{article.title}}</a></h3>
 
-
-            <h3>{{article.content}}</h3> <b>{{article.created}} / {{article.creator.fullName}}</b>
+            <h3>{{article.content}}</h3><p> {{article.rating}}</p> <b>{{article.created}} / {{article.creator.fullName}}</b>
         </md-card>
     </div>
 </form>

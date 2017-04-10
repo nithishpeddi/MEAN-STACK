@@ -30,7 +30,7 @@ CreateComponent = __decorate([
     core_1.Component({
         selector: 'create',
         templateUrl: './create.template.html',
-        styleUrls: ['./create.css']
+        styleUrls: ['./create.css'],
     }),
     __metadata("design:paramtypes", [router_1.Router, articles_service_1.ArticlesService])
 ], CreateComponent);

@@ -14,6 +14,7 @@ var create_component_1 = require("../create/create.component");
 var interview_module_1 = require("../create/interview/interview.module");
 var router_1 = require("@angular/router");
 var Level1_module_1 = require("../create/LevelOne/Level1.module");
+var forms_2 = require("@angular/forms");
 var InterviewModule = (function () {
     function InterviewModule() {
     }
@@ -22,7 +23,7 @@ var InterviewModule = (function () {
 InterviewModule = __decorate([
     core_1.NgModule({
         declarations: [create_component_1.CreateComponent],
-        imports: [common_1.CommonModule, router_1.RouterModule, forms_1.FormsModule, material_1.MaterialModule, interview_module_1.InterviewAppModule, Level1_module_1.Level1AppModule]
+        imports: [common_1.CommonModule, router_1.RouterModule, forms_1.FormsModule, material_1.MaterialModule, interview_module_1.InterviewAppModule, Level1_module_1.Level1AppModule, forms_2.ReactiveFormsModule]
     })
 ], InterviewModule);
 exports.InterviewModule = InterviewModule;

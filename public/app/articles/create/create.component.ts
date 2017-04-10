@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
+import { FormControl, FormControlDirective, FormGroup } from '@angular/forms';
+
 @Component({
     selector: 'create',
     templateUrl: './create.template.html',
-    styleUrls: ['./create.css']
+    styleUrls: ['./create.css'],
+
 })
 export class CreateComponent {
 
-    article:any = {};
+    rating: number;
+
+    article: any = {};
     errorMessage: string;
-    constructor(private _router: Router,private _articlesService: ArticlesService) { }
+    constructor(private _router: Router, private _articlesService: ArticlesService) { }
     create() {
         this._articlesService
             .create(this.article)

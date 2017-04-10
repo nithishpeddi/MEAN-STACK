@@ -5,6 +5,11 @@ const ArticleSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    rating: {
+        type:Number,
+        trim: true,
+        required: 'Rate the Employee'
+    },
     title: {
         type: String,
         default: '',
