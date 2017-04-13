@@ -1,12 +1,15 @@
 <form class="form-group">
     <div class="row">
-        <h2>List Of Employee</h2>
+        <h3>List Of Employee</h3>
 
-        <md-card *ngFor="let article of	articles;let i=index">
-            <h3> <a role="button" (click)="returnToArticle(article._id)">{{i+1}}.{{article.title}}</a></h3>
+        <md-card *ngFor="let article of	articles;let i=index ">
 
-            <h3>{{article.content}}</h3><p> {{article.rating}}</p> <b>{{article.created}} / {{article.creator.fullName}}</b>
-        </md-card>
+            <h2> <a role="button" (click)="returnToArticle(article._id)">{{i+1}}.{{article.title}} </a></h2><h3>Rating:{{article.rating}} </h3>
+            <b>{{article.content}}</b>
+            
+       
+        <div class="text-right"> <p>{{article.created}} / {{article.creator.fullName}}</p></div> </md-card>
     </div>
+    
 </form>
 <div *ngIf="articles && articles.length===0">No articles yet, why don't you <a [routerLink]="['/articles/create']">create one</a>?</div>

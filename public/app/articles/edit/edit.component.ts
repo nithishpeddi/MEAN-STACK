@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 @Component({
     selector: 'edit',
     templateUrl: 'app/articles/edit/edit.component.html'
 })
-export class EditComponent {
+export class EditComponent implements OnInit, OnDestroy {
     article: any = {};
     errorMessage: string;
     paramsObserver: any;

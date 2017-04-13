@@ -11,6 +11,7 @@ var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
 var material_1 = require("@angular/material");
+var highlight_directive_1 = require("./highlight.directive");
 var account_1 = require("../Account/account");
 var AccountModule = (function () {
     function AccountModule() {
@@ -25,7 +26,7 @@ AccountModule = __decorate([
             router_1.RouterModule, material_1.MaterialModule
         ],
         declarations: [
-            account_1.AccountComponent
+            account_1.AccountComponent, highlight_directive_1.HighlightDirective
         ]
     })
 ], AccountModule);

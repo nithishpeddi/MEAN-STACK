@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import{MaterialModule} from '@angular/material';
-
+import { HighlightDirective } from './highlight.directive';
 import{AccountComponent} from '../Account/account';
 
 @NgModule({
@@ -13,7 +13,7 @@ import{AccountComponent} from '../Account/account';
         RouterModule,MaterialModule
     ],
     declarations: [
-        AccountComponent
+        AccountComponent,HighlightDirective
     ]
 })
 export class AccountModule { }

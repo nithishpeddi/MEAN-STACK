@@ -3,11 +3,24 @@ h2{
     margin-left:10%;
 }
 row{
-    margin-left: 10%;
+    margin:15%;
 }
 a{
     margin-left: 1%;
 }
 h3{
-    margin-left:1%;
+    margin-left:35%;
+    color: red
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+h4{
+    margin-left:12%;
+    color:darkslateblue;
+}
+p{
+    margin-left:10%;
+}
+b{
+    margin-left:5%;
+    font-size: 25px;
 }

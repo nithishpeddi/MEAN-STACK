@@ -46,7 +46,7 @@
 
     </div>
     <div class="last col-sm-5">
-        <p>Todays Date {{ birthday | date:format }}</p>
+        <p>Todays Date</p><h3> {{ Date | date:format |uppercase}}</h3>
         <button class="btn-warning btn-lg" (click)="toggleFormat()">click</button>
         <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
         <span class="sr-only">Loading...</span>
@@ -78,4 +78,8 @@
     </div>
     </div>
     </div>
+<p *ngIf="user">
+    <i>Welcome, {{user}}</i>
+    <p>
+    <app-contact></app-contact>
 </form>

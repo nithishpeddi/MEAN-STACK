@@ -14,7 +14,6 @@ var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
 var authentication_service_1 = require("../authentication/authentication.service");
 var forms_1 = require("@angular/forms");
-var home_1 = require("../Home/home");
 var create_component_1 = require("../articles/create/create.component");
 var list_component_1 = require("../articles/list/list.component");
 var view_component_1 = require("../articles/view/view.component");
@@ -25,6 +24,7 @@ var articles_module_1 = require("../articles/articles.module");
 var account_module_1 = require("../Account/account.module");
 var interview_module_1 = require("../articles/create/interview/interview.module");
 var Level1_module_1 = require("../articles/create/LevelOne/Level1.module");
+var home_module_1 = require("../Home/home.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,13 +37,13 @@ AppModule = __decorate([
             http_1.HttpModule,
             router_1.RouterModule.forRoot(app_routes_1.AppRoutes),
             forms_1.FormsModule,
-            authentication_module_1.AuthenticationModule, material_1.MaterialModule, account_module_1.AccountModule, articles_module_1.ArticlesModule, interview_module_1.InterviewAppModule, Level1_module_1.Level1AppModule
+            authentication_module_1.AuthenticationModule, material_1.MaterialModule, account_module_1.AccountModule, articles_module_1.ArticlesModule, interview_module_1.InterviewAppModule, Level1_module_1.Level1AppModule, home_module_1.HomeModule
         ],
         exports: [
             router_1.RouterModule
         ],
         declarations: [
-            app_component_1.AppComponent, list_component_1.ListComponent, create_component_1.CreateComponent, edit_component_1.EditComponent, view_component_1.ViewComponent, home_1.HomeComponent
+            app_component_1.AppComponent, list_component_1.ListComponent, create_component_1.CreateComponent, edit_component_1.EditComponent, view_component_1.ViewComponent,
         ],
         providers: [
             authentication_service_1.AuthenticationService
