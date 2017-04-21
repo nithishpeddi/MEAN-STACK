@@ -15,6 +15,7 @@ var contact_service_1 = require("../Contact/contact.service");
 var awesome_pipe_1 = require("../Contact/awesome.pipe");
 var forms_1 = require("@angular/forms");
 var material_1 = require("@angular/material");
+var material_2 = require("@angular/material");
 var HomeModule = (function () {
     function HomeModule() {
     }
@@ -22,12 +23,12 @@ var HomeModule = (function () {
 }());
 HomeModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, material_1.MaterialModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, material_1.MaterialModule, material_2.MdButtonModule, material_2.MdCheckboxModule, material_2.MdChipsModule],
         declarations: [
             home_1.HomeComponent,
             awesome_pipe_1.AwesomePipe, contact_component_1.ContactComponent,
         ],
-        providers: [contact_service_1.ContactService, user_service_1.UserService],
+        providers: [contact_service_1.ContactService, user_service_1.UserService]
     })
 ], HomeModule);
 exports.HomeModule = HomeModule;

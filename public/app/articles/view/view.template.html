@@ -7,9 +7,11 @@
             {{article.content}}
         </h3>
         <h5>Date {{article.created}} by {{article.creator.fullName}}</h5>
-
-
     </div>
+
+    <form class="empty" (ngSubmit)="openDialog()" novalidate>
+        <button md-button (click)="openDialog()">Open dialog</button>
+        </form>
 
     <div class="col-sm-4" *ngIf="allowEdit">
         <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>

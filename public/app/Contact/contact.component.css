@@ -19,12 +19,15 @@
 }
 
 .msg {
-  color: blue;
+  color:black;
   background-color: whitesmoke;
   border: 1px solid transparent;
   border-radius: 4px;
   margin-bottom: 20px;
+  font-family: bold;
 }
 
-
+.form-inline{
+  text-align: center;
+}
 

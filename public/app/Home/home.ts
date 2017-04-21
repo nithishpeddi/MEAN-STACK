@@ -2,10 +2,9 @@ import { Component, Input } from '@angular/core';
 import { UserService } from '../Contact/user.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'home',
-    templateUrl: 'home.html',
-    styleUrls: ['home.css'],
+    templateUrl: './home.html',
+    styleUrls: ['./home.css'],
 })
 export class HomeComponent {
     // @Input() subtitle = '';

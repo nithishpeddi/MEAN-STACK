@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var UserService = (function () {
     function UserService() {
-        this.userName = 'Sherlock Holmes';
+        this.userName = 'Sykes Enterprise';
     }
     return UserService;
 }());

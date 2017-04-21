@@ -14,10 +14,9 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
-        moduleId: module.id,
         selector: 'mean-app',
-        templateUrl: 'app.template.html',
-        styleUrls: ['app.component.css'],
+        templateUrl: './app.template.html',
+        styleUrls: ['./app.component.css'],
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

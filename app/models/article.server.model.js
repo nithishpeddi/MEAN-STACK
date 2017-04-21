@@ -21,9 +21,17 @@ const ArticleSchema = new Schema({
         default: '',
         trim: true
     },
+    value:{
+        type:String,
+        trim:true
+    },
     creator: {
         type: Schema.ObjectId,
         ref: 'User'
+    },
+    toggle:{
+        type:Boolean,
+        
     }
 });
 mongoose.model('Article', ArticleSchema);

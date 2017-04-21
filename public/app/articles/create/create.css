@@ -46,3 +46,15 @@ label.star:before {
   content: '\f006';
   font-family: FontAwesome;
 }
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+mark{
+  margin-bottom: 20px;
+}

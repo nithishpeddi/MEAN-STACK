@@ -13,6 +13,7 @@ var router_1 = require("@angular/router");
 var articles_service_1 = require("../articles/articles.service");
 var articles_component_1 = require("./articles.component");
 var material_1 = require("@angular/material");
+var material_2 = require("@angular/material");
 var ArticlesModule = (function () {
     function ArticlesModule() {
     }
@@ -23,7 +24,7 @@ ArticlesModule = __decorate([
         imports: [
             common_1.CommonModule,
             forms_1.FormsModule,
-            router_1.RouterModule, material_1.MaterialModule
+            router_1.RouterModule, material_1.MaterialModule, material_2.MdDialogModule
         ],
         declarations: [
             articles_component_1.ArticlesComponent,

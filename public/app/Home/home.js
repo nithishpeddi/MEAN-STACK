@@ -30,10 +30,9 @@ var HomeComponent = (function () {
 }());
 HomeComponent = __decorate([
     core_1.Component({
-        moduleId: module.id,
         selector: 'home',
-        templateUrl: 'home.html',
-        styleUrls: ['home.css'],
+        templateUrl: './home.html',
+        styleUrls: ['./home.css'],
     }),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], HomeComponent);

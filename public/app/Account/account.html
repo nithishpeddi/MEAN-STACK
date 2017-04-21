@@ -14,22 +14,12 @@
         <form (ngSubmit)="signout()" novalidate>
 
  <h1>Hello {{user.firstName}}</h1>
-              <p><a [routerLink]="['/articles']">List Employees</a></p>
+              <p><a [routerLink]="['/articles']">List Employees</a><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></p>
             <p><a [routerLink]="['/articles/create']">Interview</a></p>
-             <button type="submit" class="btn btn-primary btn-lg">Signout</button>
+             <button type="submit" class="btn btn-primary btn-lg">Signout</button><i class="fa fa-hand-o-left fa-3x" aria-hidden="true"></i>
         </form>
     </md-card>
 </div>
 </form>
-<h1>My First Attribute Directive</h1>
-<p myHighlight>Highlight me!</p>
-<h1>My First Attribute Directive</h1>
-<h4>Pick a highlight color</h4>
-<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
-</div>
-<p [myHighlight]="color">Highlight me!</p>
 
 <router-outlet></router-outlet>

@@ -5,9 +5,9 @@ export class Contact {
 }
 
 const CONTACTS: Contact[] = [
-  new Contact(21, 'Sam Spade'),
-  new Contact(22, 'Nick Danger'),
-  new Contact(23, 'Nancy Drew')
+  new Contact(21, 'Jhon Cage'),
+  new Contact(22, 'Benjamin Vierik'),
+  new Contact(23, 'Dave Vandenburg')
 ];
 
 const FETCH_LATENCY = 500;

@@ -7,27 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var forms_1 = require("@angular/forms");
-var router_1 = require("@angular/router");
-var material_1 = require("@angular/material");
-var account_1 = require("../Account/account");
-var AccountModule = (function () {
-    function AccountModule() {
+var DialogOverview = (function () {
+    function DialogOverview() {
     }
-    return AccountModule;
+    return DialogOverview;
 }());
-AccountModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            forms_1.FormsModule,
-            router_1.RouterModule, material_1.MaterialModule
-        ],
-        declarations: [
-            account_1.AccountComponent
-        ]
+DialogOverview = __decorate([
+    core_1.Component({
+        selector: 'dialog-overview-example-dialog',
+        templateUrl: './Dialog.html',
     })
-], AccountModule);
-exports.AccountModule = AccountModule;
-//# sourceMappingURL=account.module.js.map
+], DialogOverview);
+exports.DialogOverview = DialogOverview;
+//# sourceMappingURL=Dialogcomponent.js.map

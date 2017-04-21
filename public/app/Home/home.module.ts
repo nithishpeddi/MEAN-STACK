@@ -7,15 +7,18 @@ import { ContactService } from '../Contact/contact.service';
 import { AwesomePipe } from '../Contact/awesome.pipe';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdChipsModule } from '@angular/material';
+
 @NgModule({
-    imports: [BrowserModule, FormsModule, MaterialModule],
+    imports: [BrowserModule, FormsModule, MaterialModule, MdButtonModule, MdCheckboxModule, MdChipsModule],
     declarations: [
         HomeComponent,
         AwesomePipe, ContactComponent,
     ],
-    providers: [ContactService, UserService],
-
+    providers: [ContactService, UserService]
 })
 export class HomeModule { }
+
+
 
 

@@ -1,85 +1,84 @@
-<form>
+<div>
+    <h3>Sykes Enterprise</h3></div>
+    <md-progress-bar mode="indeterminate"></md-progress-bar>
     <div class="image col-sm-2">
-        <md-card class="example-card">
-            <md-card-header>
-                <div md-card-avatar class="example-header-image"></div>
-                <md-card-title>
-                    <h4>Make Every day and Every Minute Count</h4>
-                </md-card-title>
-                <md-card-subtitle></md-card-subtitle>
-            </md-card-header>
-            <img md-card-image src="./assets/jhoncage.jpg"> </md-card>
-        <ul>
-            <li>
-                <h4> Work: Vice President</h4>
-            </li>
-            <li>
-                <h4>Family: Recruitment</h4>
-            </li>
-            <li>
-                <h4>Location: Greater St. Louis Area</h4>
-            </li>
-            <li>
-                <h4>Email:
-                    <u>johnc@johncage-ent.com</u>
-                </h4>
-            </li>
-        </ul>
+    <md-card class="example-card">
+        <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>
+                <h4>Make Every day and Every Minute Count</h4>
+            </md-card-title>
+            <md-card-subtitle></md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="./assets/jhoncage.jpg"> </md-card>
+    <ul>
+        <li>
+            <h4> Work: Vice President</h4>
+        </li>
+        <li>
+            <h4>Family: Recruitment</h4>
+        </li>
+        <li>
+            <h4>Location: Greater St. Louis Area</h4>
+        </li>
+        <li>
+            <h4>Email:
+                <u>johnc@johncage-ent.com</u>
+            </h4>
+        </li>
+    </ul>
 
-    </div>
-    <div class="parag col-sm-5">
-        <md-card>
-            <h4>An accomplished leader recognized for his strengths in developing, delivering and sustaining business-to-business
-                success. Exceptional communicator with a consultative leadership style and exceptional recruitment skills.
-                Extensive experience in developing long-term business relationships in specific verticals. Dynamic team building
-                skills with the ability to drive peak individual performance from team members. Expert in all phases of the
-                recruitment development cycles from sourcing and cold calling through onboarding, including detailed high-caliber
-                sourcing plans, analytics and the ability to select and implement the right technology.</h4>
-        </md-card>
-        <br>
+</div>
+<div class="parag col-sm-5">
+    <md-card>
+        <h4>An accomplished leader recognized for his strengths in developing, delivering and sustaining business-to-business
+            success. Exceptional communicator with a consultative leadership style and exceptional recruitment skills. Extensive
+            experience in developing long-term business relationships in specific verticals. Dynamic team building skills
+            with the ability to drive peak individual performance from team members. Expert in all phases of the recruitment
+            development cycles from sourcing and cold calling through onboarding, including detailed high-caliber sourcing
+            plans, analytics and the ability to select and implement the right technology.</h4>
+    </md-card>
+    <br>
 
-        <h3>Goals</h3>
-        <p>1.To Simply Be The Best!</p>
-        <p>2.Teach Others To Be Great Recruitment Professionals</p>
-        <p>3.Continue Learning New Technology</p>
-        <p>4.Innovate</p>
+    <h3>Goals</h3>
+    <p>1.To Simply Be The Best!</p>
+    <p>2.Teach Others To Be Great Recruitment Professionals</p>
+    <p>3.Continue Learning New Technology</p>
+    <p>4.Innovate</p>
 
-    </div>
-    <div class="last col-sm-5">
-        <p>Todays Date</p><h3> {{ Date | date:format |uppercase}}</h3>
-        <button class="btn-warning btn-lg" (click)="toggleFormat()">click</button>
-        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-        <span class="sr-only">Loading...</span>
-        <h2>Knowledge Check Preferred Channels</h2>
-        <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-                style="width:40%">
-                40%
-        </div>
-    </div>
-    <h2>Boolean Knowledge</h2>
+</div>
+<div class="last col-sm-5">
+    <p>Todays Date</p>
+    <h3> {{ Date | date:format |uppercase}}</h3>
+    <button class="btn-warning btn-lg" (click)="toggleFormat()">click</button>
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+    <h2>Knowledge Check Preferred Channels</h2>
     <div class="progress">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-            50%
-        </div>
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+            style="width:40%">
+            40%
     </div>
-    <h2>Social Media Knowledge</h2>
-    <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-            style="width:60%">
-            60%
+</div>
+<h2>Boolean Knowledge</h2>
+<div class="progress">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+        50%
     </div>
-    </div>
-    <h2>Proactive Knowledge</h2>
-    <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-            style="width:70%">
-            70%
-    </div>
-    </div>
-    </div>
-<p *ngIf="user">
-    <i>Welcome, {{user}}</i>
-    <p>
-    <app-contact></app-contact>
-</form>
+</div>
+<h2>Social Media Knowledge</h2>
+<div class="progress">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+        style="width:60%">60%</div>
+</div>
+<h2>Proactive Knowledge</h2>
+<div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+        style="width:70%">70%</div>
+</div>
+
+<div class="bar">
+<p *ngIf="user"><b>Welcome, {{user}}</b></p>
+</div>
+
+<app-contact></app-contact>

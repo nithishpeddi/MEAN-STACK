@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../authentication/authentication.service';
 import { ArticlesService } from '../articles.service';
+import { MdDialog } from '@angular/material';
+import { DialogOverview } from '../Dialog/Dialogcomponent';
+
 @Component({
     selector: 'view',
     templateUrl: 'app/articles/view/view.template.html',
@@ -13,6 +16,7 @@ export class ViewComponent {
     paramsObserver: any;
     errorMessage: string;
     allowEdit: boolean = false;
+
     constructor(private _router: Router,
         private _route: ActivatedRoute,
         private _authenticationService: AuthenticationService,
@@ -21,7 +25,7 @@ export class ViewComponent {
     next(id: string) {
         this._router.navigate([`/articles/create/interview/${id}`])
     }
-     edit(id: string) {
+    edit(id: string) {
         this._router.navigate([`/articles/edit/${id}`]);
     }
     ngOnInit() {
@@ -49,3 +53,17 @@ export class ViewComponent {
             error => this.errorMessage = error);
     }
 }
+
+export class DialogOverviewExample {
+    constructor(public dialog: MdDialog) { }
+
+    openDialog() {
+        console.log('openDialog');
+        this.dialog.open(DialogOverview);
+    }
+}
+
+
+
+
+

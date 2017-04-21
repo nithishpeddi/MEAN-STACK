@@ -1,25 +1,29 @@
-<form class="mark">
-    <h1>Interviewer Details</h1>
-    <h3>Section-3</h3>
-    <ul>
+<form class="mark"  (ngSubmit)="update()" novalidate>
+    
+        <h1>Interviewer Details</h1>
+        <h3>Section-3</h3>
+
+    <div class="row">
+         <ul>
         <li><b> 1. Tell me what experiences you have had where you achieved something similar to this objective. ?</b></li>
         <li><b> 2. Why do you do what you do? -or- Why are you a (accountant, sales rep, data entryclerk, CEO)?</b>
         </li>
     </ul>
+    </div>
     <form class="form-inline">
-        <div class="form-group" *ngIf="article" (ngSubmit)="update()" novalidate>
-            <h3>
+    <div class="form-group" *ngIf="article"(ngSubmit)="update()" novalidate>
+         <h3>
                 <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Employee Name: {{article.title}}
             </h3>
-            <h1><label for="content">Comments</label></h1>
-    <textarea class="form-control" type="text" required cols="180" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
-</div>
-    </form>
-    <button class="button btn-primary btn-lg" value="Back" type="submit" routerLink="/articles/create" routerLinkActive="active">Back</button>
-    <button type="submit" class=" button btn-info btn-lg" value="Update" (click)="update()">update</button>
-   
-    <strong id="error">{{errorMessage}}</strong>
-    <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-</form>
+        <h1><label for="content">Comments</label></h1>
+      
+            <textarea class="form-control" type="text" required cols="150" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
+        </div></form>
+            <button class="button btn-info btn-lg" value="Back" type="submit" routerLink="/articles/create" routerLinkActive="active">Back</button>
+            <button  type="submit" class="button btn-danger btn-lg" value="Update" (click)="update()">update</button>
+            <strong id="error">{{errorMessage}}</strong>
+            <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
+        </form>
+
 
 <router-outlet></router-outlet>

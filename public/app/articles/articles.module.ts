@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ArticlesService } from '../articles/articles.service';
 import { ArticlesComponent } from './articles.component';
-import{MaterialModule} from '@angular/material';
+import { MaterialModule } from '@angular/material';
+import {MdDialogModule} from '@angular/material';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        RouterModule,MaterialModule
+        RouterModule, MaterialModule,MdDialogModule
     ],
     declarations: [
         ArticlesComponent,
@@ -19,6 +20,7 @@ import{MaterialModule} from '@angular/material';
     providers: [
         ArticlesService
     ],
+    
 })
 export class ArticlesModule {
 

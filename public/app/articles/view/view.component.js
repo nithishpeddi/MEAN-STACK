@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var authentication_service_1 = require("../../authentication/authentication.service");
 var articles_service_1 = require("../articles.service");
+var Dialogcomponent_1 = require("../Dialog/Dialogcomponent");
 var ViewComponent = (function () {
     function ViewComponent(_router, _route, _authenticationService, _articlesService) {
         this._router = _router;
@@ -64,4 +65,15 @@ ViewComponent = __decorate([
         articles_service_1.ArticlesService])
 ], ViewComponent);
 exports.ViewComponent = ViewComponent;
+var DialogOverviewExample = (function () {
+    function DialogOverviewExample(dialog) {
+        this.dialog = dialog;
+    }
+    DialogOverviewExample.prototype.openDialog = function () {
+        console.log('openDialog');
+        this.dialog.open(Dialogcomponent_1.DialogOverview);
+    };
+    return DialogOverviewExample;
+}());
+exports.DialogOverviewExample = DialogOverviewExample;
 //# sourceMappingURL=view.component.js.map

@@ -17,6 +17,11 @@ var CreateComponent = (function () {
         this._router = _router;
         this._articlesService = _articlesService;
         this.article = {};
+        this.options = [
+            { value: 'Good', description: 'Good' },
+            { value: 'Extrodinary', description: 'Extrodinary' },
+            { value: 'SuperStar', description: 'SuperStar' }
+        ];
     }
     CreateComponent.prototype.create = function () {
         var _this = this;

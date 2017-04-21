@@ -24,7 +24,7 @@ p{
     font-style: normal;
 }
 .row{
-    background-color:lightskyblue;
+    background-color:white;
     margin: 20%;
 }
 h2{
@@ -37,13 +37,10 @@ md-card{
     /*margin: 60px;*/
     margin-left:35%
     }
-    .btn {
-    margin-top: 0%;
-    margin-left: 40px;
-}
+   
 .fa{
     margin-left: 5%;
 }
 .btn{
-    margin-left:10px;
+    margin-left:65px;
 }

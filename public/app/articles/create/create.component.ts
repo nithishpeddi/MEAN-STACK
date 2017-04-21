@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArticlesService } from '../articles.service';
 import { FormControl, FormControlDirective, FormGroup } from '@angular/forms';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
     selector: 'create',
@@ -10,12 +11,20 @@ import { FormControl, FormControlDirective, FormGroup } from '@angular/forms';
 
 })
 export class CreateComponent {
+    constructor(private _router: Router, private _articlesService: ArticlesService) { }
 
+
+    value: string;
     rating: number;
-
     article: any = {};
     errorMessage: string;
-    constructor(private _router: Router, private _articlesService: ArticlesService) { }
+
+    options = [
+        { value: 'Good', description: 'Good' },
+        { value: 'Extrodinary', description: 'Extrodinary' },
+        { value: 'SuperStar', description: 'SuperStar' }
+    ];
+
     create() {
         this._articlesService
             .create(this.article)

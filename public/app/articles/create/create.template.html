@@ -1,8 +1,6 @@
-<form class="mark" (ngSubmit)="create()" novalidate>
+<form class="" (ngSubmit)="create()" novalidate>
     <h1>Interviewer Details</h1>
     <h3>Section-1</h3>
-
-
     <div class="row">
         <ul>
             <li><b> What is the most significant project or suggestion you initiated in your career?</b></li>
@@ -10,36 +8,47 @@
         </ul>
     </div>
 
-    <form class="form-inline" >
+    <form class="form-inline">
         <div class="form-group">
             <h3><label class="fa fa-user-circle-o fa-1x" for="title">Employee Name </label></h3>
             <input type="text" class="form-control" required [(ngModel)]="article.title" name="title" placeholder="Ex:Joe goy">
         </div>
     </form>
-<div class="stars">
-  <form #f="ngForm">
-       <h2>Rating: {{ article.rating}}</h2>
-    <input class="star star-5" id="star-5" value="5" type="radio" [(ngModel)]="article.rating" name="rating"/>
-    <label class="star star-5" for="star-5"></label>
-    <input class="star star-4" id="star-4" value="4" type="radio" [(ngModel)]="article.rating"  name="rating"/>
-    <label class="star star-4" for="star-4"></label>
-    <input class="star star-3" id="star-3" value="3" type="radio" [(ngModel)]="article.rating" name="rating"/>
-    <label class="star star-3" for="star-3"></label>
-    <input class="star star-2" id="star-2"value="2" type="radio"  [(ngModel)]="article.rating" name="rating"/>
-    <label class="star star-2" for="star-2"></label>
-    <input class="star star-1" id="star-1" value="1" type="radio"  [(ngModel)]="article.rating" name="rating"/>
-    <label class="star star-1" for="star-1"></label>
-  </form></div>
-  
+    <div class="stars">
+        <form #f="ngForm">
+            <h2>Rating: {{ article.rating}}</h2>
+            <input class="star star-5" id="star-5" value="5" type="radio" [(ngModel)]="article.rating" name="rating" />
+            <label class="star star-5" for="star-5"></label>
+            <input class="star star-4" id="star-4" value="4" type="radio" [(ngModel)]="article.rating" name="rating" />
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-3" id="star-3" value="3" type="radio" [(ngModel)]="article.rating" name="rating" />
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-2" id="star-2" value="2" type="radio" [(ngModel)]="article.rating" name="rating" />
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-1" id="star-1" value="1" type="radio" [(ngModel)]="article.rating" name="rating" />
+            <label class="star star-1" for="star-1"></label>
+        </form>
+    </div>
 
+    <h3> Humun Nature:{{article.value}}</h3>
+
+    <md-select class="col-sm-1" [(ngModel)]="article.value" [ngModelOptions]="{standalone: true}">
+
+        <md-option *ngFor="let option of options" [value]="option.value"> {{option.description}}</md-option>
+        
+    </md-select>
+    <div class="col-sm-2">
+        <i class="fa fa-2x" [class.fa-thumbs-up]="article.toggle" [class.fa-thumbs-down]="!article.toggle" (click)="article.toggle = !article.toggle"></i>
+    </div>
     <h1><label for="content">Comments</label></h1>
     <div>
         <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
     </div>
+
     <button class="button btn-lg btn-success" type="submit">submit</button>
     <strong id="error">{{errorMessage}}</strong>
     <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-    <h4>Page No 1</h4>
+
 </form>
 
 <router-outlet></router-outlet>
