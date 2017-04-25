@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../Contact/user.service");
+var hero_1 = require("./hero");
 var HomeComponent = (function () {
     function HomeComponent(userService) {
-        // @Input() subtitle = '';
-        // title = 'Angular Modules';
         this.user = '';
         this.Date = new Date();
         this.toggle = true;
+        this.title = 'Tour of Heroes';
+        this.heroes = hero_1.HEROES;
         this.user = userService.userName;
     }
     Object.defineProperty(HomeComponent.prototype, "format", {
@@ -26,6 +27,9 @@ var HomeComponent = (function () {
         configurable: true
     });
     HomeComponent.prototype.toggleFormat = function () { this.toggle = !this.toggle; };
+    HomeComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     return HomeComponent;
 }());
 HomeComponent = __decorate([

@@ -1,14 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { UserService } from '../Contact/user.service';
-
+import { Hero,HEROES } from './hero';
 @Component({
     selector: 'home',
     templateUrl: './home.html',
     styleUrls: ['./home.css'],
 })
 export class HomeComponent {
-    // @Input() subtitle = '';
-    // title = 'Angular Modules';
     user = '';
     constructor(userService: UserService) {
         this.user = userService.userName;
@@ -21,6 +19,13 @@ export class HomeComponent {
     toggleFormat() { this.toggle = !this.toggle; }
 
 
+    title = 'Tour of Heroes';
+
+    heroes = HEROES;
+    selectedHero: Hero;
+    onSelect(hero: Hero): void {
+        this.selectedHero = hero;
+    }
 }
 
 

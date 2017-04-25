@@ -2,10 +2,14 @@
     <h1>Interviewer Details</h1>
     <h3>Section-1</h3>
     <div class="row">
-        <ul>
-            <li><b> What is the most significant project or suggestion you initiated in your career?</b></li>
-            <li><b> Now tell me about a significant project or suggestion in each of your positions </b></li>
-        </ul>
+        <ol>
+            <li>
+                <h4> What is the most significant project or suggestion you initiated in your career?</h4>
+            </li>
+            <li>
+                <h4>Now tell me about a significant project or suggestion in each of your positions</h4>
+            </li>
+        </ol>
     </div>
 
     <form class="form-inline">
@@ -30,19 +34,14 @@
         </form>
     </div>
 
-    <h3> Humun Nature:{{article.value}}</h3>
-
-    <md-select class="col-sm-1" [(ngModel)]="article.value" [ngModelOptions]="{standalone: true}">
-
-        <md-option *ngFor="let option of options" [value]="option.value"> {{option.description}}</md-option>
-
-    </md-select>
-    <div class="col-sm-2">
-        <i class="fa fa-2x" [class.fa-thumbs-up]="article.toggle" [class.fa-thumbs-down]="!article.toggle" (click)="article.toggle = !article.toggle"></i>
-    </div>
-
-
-    <button md-button type="button" (click)="openDialog()" >Open dialog</button> Sex: {{article.selectedOption}}
+{{title}}
+    <div class="col-sm-4">
+        <h3> Humun Nature:{{article.value}}</h3>
+        <md-select class="col-sm-1" [(ngModel)]="article.value" [ngModelOptions]="{standalone: true}">
+            <md-option *ngFor="let option of options" [value]="option.value"> {{option.description}}</md-option>
+        </md-select>
+        <button md-button type="button" (click)="openDialog()"><b>Gender</b></button><b> {{article.selectedOption}}</b></div>
+    <i class="fa fa-2x" [class.fa-thumbs-up]="article.toggle" [class.fa-thumbs-down]="!article.toggle" (click)="article.toggle = !article.toggle"></i>
     <h1><label for="content">Comments</label></h1>
     <div>
         <textarea class="form-control" type="text" required cols="30" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>

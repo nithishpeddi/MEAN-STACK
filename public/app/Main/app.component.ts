@@ -7,5 +7,6 @@ import{AppRoutes} from './app.routes';
     styleUrls:['./app.component.css'],
 })
 export class AppComponent {
+     position = 'before';
    
  }
