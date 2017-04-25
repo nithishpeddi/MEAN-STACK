@@ -32,6 +32,12 @@ const ArticleSchema = new Schema({
     toggle:{
         type:Boolean,
         
+    },
+    selectedOption:{
+        type:String,
+        trim:true,
+        required:'select Gender'
+
     }
 });
 mongoose.model('Article', ArticleSchema);

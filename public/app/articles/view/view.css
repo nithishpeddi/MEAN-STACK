@@ -5,3 +5,28 @@ h5{
     margin-left:50%;
     color: green;
 }
+.fa{
+    align-content: right;
+
+}
+button{
+    color: red;
+}
+
+.example-container {
+  width: 100%;
+  height: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 8%;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}

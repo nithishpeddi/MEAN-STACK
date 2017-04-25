@@ -12,10 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var articles_service_1 = require("../articles.service");
+var material_1 = require("@angular/material");
+var dialog_result_example_result_1 = require("./dialog-result-example-result");
+require("rxjs/add/operator/startWith");
 var CreateComponent = (function () {
-    function CreateComponent(_router, _articlesService) {
+    function CreateComponent(_router, _articlesService, dialog) {
         this._router = _router;
         this._articlesService = _articlesService;
+        this.dialog = dialog;
         this.article = {};
         this.options = [
             { value: 'Good', description: 'Good' },
@@ -29,6 +33,14 @@ var CreateComponent = (function () {
             .create(this.article)
             .subscribe(function (createdArticle) { return _this._router.navigate(["/articles/view/" + createdArticle._id]); }, function (error) { return _this.errorMessage = error; });
     };
+    CreateComponent.prototype.openDialog = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(dialog_result_example_result_1.DialogResultExampleDialog);
+        dialogRef.afterClosed().subscribe(function (result) {
+            _this.article.selectedOption = result;
+            console.log('article.selectedOption', _this.article.selectedOption);
+        });
+    };
     return CreateComponent;
 }());
 CreateComponent = __decorate([
@@ -37,7 +49,7 @@ CreateComponent = __decorate([
         templateUrl: './create.template.html',
         styleUrls: ['./create.css'],
     }),
-    __metadata("design:paramtypes", [router_1.Router, articles_service_1.ArticlesService])
+    __metadata("design:paramtypes", [router_1.Router, articles_service_1.ArticlesService, material_1.MdDialog])
 ], CreateComponent);
 exports.CreateComponent = CreateComponent;
 //# sourceMappingURL=create.component.js.map

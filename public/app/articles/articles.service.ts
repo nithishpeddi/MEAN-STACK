@@ -10,11 +10,14 @@ export class ArticlesService {
     constructor(private _http: Http) {
 
      }
+     
     create(article: any): Observable<any> {
+         console.log('article',article);
         return this._http
             .post(this._baseURL, article, this._options)
             .map((res: Response) => res.json())
             .catch(this.handleError);
+           
     }
     read(articleId: string): Observable<any> {
         return this._http

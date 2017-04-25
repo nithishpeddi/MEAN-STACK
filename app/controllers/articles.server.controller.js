@@ -11,7 +11,9 @@ function getErrorMessage(err) {
 };
 exports.create = function (req, res) {
     console.log('server - create')
+    console.log('requested body',req.body)
     const article = new Article(req.body);
+
     console.log('article', article)
     article.creator = req.user;
     article.save((err) => {

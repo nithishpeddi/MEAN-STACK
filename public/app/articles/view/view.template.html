@@ -1,29 +1,49 @@
 <table class="container">
+    <h2>Employee Details</h2>
     <div *ngIf="article && article.creator">
-        <h2>
-            <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Employee: {{article.title}}
-        </h2>
-        <h3>
-            {{article.content}}
-        </h3>
-        <h5>Date {{article.created}} by {{article.creator.fullName}}</h5>
-    </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><b>Employee Name</b></th>
+                    <th><b>Comments</b></th>
+                    <th><b>Interview By</b></th>
+                    <th><b>ThumbUp/Down</b></th>
+                    <th><b>Delete</b></th>
+                    <th><b>Gender</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{article.title}}</td>
+                    <td>{{article.content}}</td>
+                    <td> Date : {{article.created}} By {{article.creator.fullName}}</td>
+                    <td><i class="fa fa-2x" [class.fa-thumbs-up]="article.toggle" [class.fa-thumbs-down]="!article.toggle"></i></td>
+                    <td><button class="fa fa-trash fa-2x" (click)="delete()" aria-hidden="true"></button></td>
+                    <td>{{article.selectedOption}}</td>
+                </tr>
+            </tbody>
 
-    <form class="empty" (ngSubmit)="openDialog()" novalidate>
-        <button md-button (click)="openDialog()">Open dialog</button>
-        </form>
+        </table>
+        <div class="col-sm-4" *ngIf="allowEdit">
+            <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>
 
-    <div class="col-sm-4" *ngIf="allowEdit">
-        <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>
+        </div>
+        <div class="col-sm-4">
+            <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
 
-    </div>
-    <div class="col-sm-3">
+        </div>
+        <md-sidenav-container class="example-container">
+            <md-sidenav #sidenav class="example-sidenav">
+                <a ng-href="https://www.google.com/">Search Google</a>
+            </md-sidenav>
+
+            <div class="example-sidenav-content">
+                <button md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+            </div>
+
+        </md-sidenav-container>
 
 
-        <button class="btn btn-info" (click)="delete()"> <i class="fa fa-trash-o fa-lg "></i> Delete</button></div>
-    <div class="col-sm-4">
-        <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
-
-    </div>
-</table>
-<router-outlet></router-outlet>
+        <router-outlet></router-outlet>

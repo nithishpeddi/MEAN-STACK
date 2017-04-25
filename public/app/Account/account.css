@@ -3,7 +3,7 @@ items{
     font-size:29px;
 }
 button{
-margin-left: 0%;
+margin-left: 79px;
 margin-top: 0%;
 }
 .example-radio-group {
@@ -42,5 +42,5 @@ md-card{
     margin-left: 5%;
 }
 .btn{
-    margin-left:65px;
+    margin-left:0px;
 }

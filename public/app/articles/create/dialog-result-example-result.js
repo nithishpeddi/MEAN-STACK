@@ -5,18 +5,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var DialogOverview = (function () {
-    function DialogOverview() {
+var material_1 = require("@angular/material");
+var DialogResultExampleDialog = (function () {
+    function DialogResultExampleDialog(dialogRef) {
+        this.dialogRef = dialogRef;
     }
-    return DialogOverview;
+    return DialogResultExampleDialog;
 }());
-DialogOverview = __decorate([
+DialogResultExampleDialog = __decorate([
     core_1.Component({
-        selector: 'dialog-overview-example-dialog',
-        templateUrl: './Dialog.html',
-    })
-], DialogOverview);
-exports.DialogOverview = DialogOverview;
-//# sourceMappingURL=Dialogcomponent.js.map
+        templateUrl: './dialog-result-example-result.html'
+    }),
+    __metadata("design:paramtypes", [material_1.MdDialogRef])
+], DialogResultExampleDialog);
+exports.DialogResultExampleDialog = DialogResultExampleDialog;
+//# sourceMappingURL=dialog-result-example-result.js.map

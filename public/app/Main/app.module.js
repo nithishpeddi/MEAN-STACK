@@ -14,9 +14,7 @@ var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
 var authentication_service_1 = require("../authentication/authentication.service");
 var forms_1 = require("@angular/forms");
-var create_component_1 = require("../articles/create/create.component");
 var list_component_1 = require("../articles/list/list.component");
-var view_component_1 = require("../articles/view/view.component");
 var edit_component_1 = require("../articles/edit/edit.component");
 var authentication_module_1 = require("../authentication/authentication.module");
 var material_1 = require("@angular/material");
@@ -43,7 +41,7 @@ AppModule = __decorate([
             router_1.RouterModule
         ],
         declarations: [
-            app_component_1.AppComponent, list_component_1.ListComponent, create_component_1.CreateComponent, edit_component_1.EditComponent, view_component_1.ViewComponent,
+            app_component_1.AppComponent, list_component_1.ListComponent, edit_component_1.EditComponent,
         ],
         providers: [
             authentication_service_1.AuthenticationService

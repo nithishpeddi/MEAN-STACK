@@ -20,6 +20,7 @@ var ArticlesService = (function () {
         this._options = { headers: new http_1.Headers({ 'Content-Type': 'application/json' }) };
     }
     ArticlesService.prototype.create = function (article) {
+        console.log('article', article);
         return this._http
             .post(this._baseURL, article, this._options)
             .map(function (res) { return res.json(); })

@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
 import { AuthenticationService } from '../authentication/authentication.service';
 import { FormsModule } from '@angular/forms';
-import { CreateComponent } from '../articles/create/create.component';
+
 import { ListComponent } from '../articles/list/list.component';
-import { ViewComponent } from '../articles/view/view.component';
 import { EditComponent } from '../articles/edit/edit.component';
 import { AuthenticationModule } from '../authentication/authentication.module';
 import { MaterialModule } from '@angular/material';
@@ -17,6 +16,7 @@ import { AccountModule } from '../Account/account.module';
 import { InterviewAppModule } from '../articles/create/interview/interview.module';
 import { Level1AppModule } from '../articles/create/LevelOne/Level1.module';
 import { HomeModule } from '../Home/home.module';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -30,7 +30,7 @@ import { HomeModule } from '../Home/home.module';
         RouterModule
     ],
     declarations: [
-        AppComponent, ListComponent, CreateComponent, EditComponent, ViewComponent,
+        AppComponent, ListComponent, EditComponent,
     ],
     providers: [
         AuthenticationService

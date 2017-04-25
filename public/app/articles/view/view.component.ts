@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../authentication/authentication.service';
 import { ArticlesService } from '../articles.service';
-import { MdDialog } from '@angular/material';
-import { DialogOverview } from '../Dialog/Dialogcomponent';
+
 
 @Component({
     selector: 'view',
-    templateUrl: 'app/articles/view/view.template.html',
-    styleUrls: ['app/articles/view/view.css']
+    templateUrl: './view.template.html',
+    styleUrls: ['./view.css']
 })
 export class ViewComponent {
     user: any;
@@ -16,6 +15,7 @@ export class ViewComponent {
     paramsObserver: any;
     errorMessage: string;
     allowEdit: boolean = false;
+    
 
     constructor(private _router: Router,
         private _route: ActivatedRoute,
@@ -53,17 +53,3 @@ export class ViewComponent {
             error => this.errorMessage = error);
     }
 }
-
-export class DialogOverviewExample {
-    constructor(public dialog: MdDialog) { }
-
-    openDialog() {
-        console.log('openDialog');
-        this.dialog.open(DialogOverview);
-    }
-}
-
-
-
-
-

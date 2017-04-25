@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let article of articles;let i=index">
-                <td role=" raised-button" (click)="returnToArticle(article._id)">{{i+1}}.{{article.title}}</td>
+                <td><button class="btn" (click)="returnToArticle(article._id)">{{i+1}}.{{article.title}}</button></td>
                 <td>{{article.rating}}</td>
                 <td>{{article.value}}</td>
                 <td>{{article.content}}</td>

@@ -10,10 +10,12 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
-var articles_service_1 = require("../articles/articles.service");
+var articles_service_1 = require("./articles.service");
 var articles_component_1 = require("./articles.component");
 var material_1 = require("@angular/material");
 var material_2 = require("@angular/material");
+var view_module_1 = require("./view/view.module");
+var create_module_1 = require("./create/create.module");
 var ArticlesModule = (function () {
     function ArticlesModule() {
     }
@@ -24,14 +26,14 @@ ArticlesModule = __decorate([
         imports: [
             common_1.CommonModule,
             forms_1.FormsModule,
-            router_1.RouterModule, material_1.MaterialModule, material_2.MdDialogModule
+            router_1.RouterModule, material_1.MaterialModule, material_2.MdDialogModule, view_module_1.ViewsModule, create_module_1.InterviewModule
         ],
         declarations: [
-            articles_component_1.ArticlesComponent,
+            articles_component_1.ArticlesComponent
         ],
         providers: [
             articles_service_1.ArticlesService
-        ],
+        ]
     })
 ], ArticlesModule);
 exports.ArticlesModule = ArticlesModule;
