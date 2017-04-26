@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
 import { AuthenticationService } from '../authentication/authentication.service';
 import { FormsModule } from '@angular/forms';
-
 import { ListComponent } from '../articles/list/list.component';
 import { EditComponent } from '../articles/edit/edit.component';
 import { AuthenticationModule } from '../authentication/authentication.module';

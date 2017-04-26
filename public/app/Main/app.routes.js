@@ -21,8 +21,7 @@ exports.AppRoutes = [
         ]
     },
     {
-        path: 'articles',
-        children: [
+        path: 'articles', children: [
             { path: '', component: list_component_1.ListComponent },
             {
                 path: 'create', children: [

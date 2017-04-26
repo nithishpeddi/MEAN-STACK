@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
+import {MdInputModule} from '@angular/material';
 @Component({
     selector: 'signup',
     templateUrl: 'app/authentication/signup/signup.template.html',

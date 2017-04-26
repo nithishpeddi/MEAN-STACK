@@ -21,7 +21,8 @@ p{
 }
 h4{
     color:black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:bold;
+    margin-block-start: 10px;
     
 
 }
@@ -39,4 +40,9 @@ b{
 }
 .last{
     margin-top: 1%;
+}
+.title{
+    margin: -6px,0px,10px;
+    font-family: sans-serif;
+    height: 40px;
 }

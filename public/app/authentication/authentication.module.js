@@ -13,6 +13,7 @@ var authentication_routes_1 = require("./authentication.routes");
 var authentication_component_1 = require("./authentication.component");
 var signin_component_1 = require("./signin/signin.component");
 var signup_component_1 = require("./signup/signup.component");
+var material_1 = require("@angular/material");
 var AuthenticationModule = (function () {
     function AuthenticationModule() {
     }
@@ -21,7 +22,7 @@ var AuthenticationModule = (function () {
 AuthenticationModule = __decorate([
     core_1.NgModule({
         imports: [
-            forms_1.FormsModule,
+            forms_1.FormsModule, material_1.MdInputModule,
             router_1.RouterModule.forChild(authentication_routes_1.AuthenticationRoutes),
         ],
         declarations: [

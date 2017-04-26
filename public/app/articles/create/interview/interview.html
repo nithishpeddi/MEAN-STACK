@@ -1,29 +1,34 @@
-<form class="mark"  (ngSubmit)="update()" novalidate>
-    
-        <h1>Interviewer Details</h1>
-        <h3>Section-2</h3>
+<form class="" (ngSubmit)="update()" novalidate>
+
+    <h1>Interviewer Details</h1>
+    <h3>Section-2</h3>
 
     <div class="row">
-        <ul>
-            <li><b> 1. Please tell me about your most successful attempt to encourage others to take action and get the job done ?</b></li>
-            <li><b> 2. Now give me examples of how you did this in each of your positions?</b>
+        <ol>
+            <li>
+                <h4> Please tell me about your most successful attempt to encourage others to take action and get the job done
+                    ?</h4>
             </li>
-        </ul>
+            <li>
+                <h4> Now give me examples of how you did this in each of your positions?</h4>
+            </li>
+        </ol>
     </div>
     <form class="form-inline">
-    <div class="form-group" *ngIf="article"(ngSubmit)="update()" novalidate>
-        <h3>
-            <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i> Employee Name: {{article.title}}
-        </h3>
-        <h1><label for="content">Comments</label></h1>
-      
+        <div class="form-group" *ngIf="article" (ngSubmit)="update()" novalidate>
+            <h3>
+                <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i> Employee Name: {{article.title}}
+            </h3>
+            <h1><label for="content">Comments</label></h1>
+
             <textarea class="form-control" type="text" required cols="150" rows="10" [(ngModel)]="article.content" name="content" placeholder="Content"></textarea>
-        </div></form>
-            <button class="button btn-info btn-lg" value="Update" (click)="update()">update</button>
-            <button class="button btn-danger btn-lg" (click)="next(article._id)">Next Section </button>
-            <strong id="error">{{errorMessage}}</strong>
-            <footer class="footer"> Copyright © 2017 Sykes Enterprises, Incorporated</footer>
-        </form>
+        </div>
+    </form>
+    <button class="button btn-info" value="Update" (click)="update()">update</button>
+    <button class="button btn-danger " (click)="next(article._id)">Next Section </button>
+    <strong id="error">{{errorMessage}}</strong>
+
+</form>
 
 
 <router-outlet></router-outlet>

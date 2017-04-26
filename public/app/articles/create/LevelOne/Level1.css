@@ -1,18 +1,27 @@
 
-mark{
-    margin-left: 15%;
-}
-button{
-  margin-top:4%;
-  margin-left: 5%;
-  margin-bottom: 3%;
- 
-}
 b{
-  font-size: 25px;
-  color:black
+  font-size: 35px;
+  color:black;
+  font-family: bold;
 }
 h3{
   color: red;
   font-family: sans-serif;
+}
+.example-container {
+  width: 700px;
+  margin-top: 3%;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+button-row{
+ margin-top: 3%;
+
+}
+.col-sm-1{
+  margin-top: 3%;
 }

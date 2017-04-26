@@ -1,5 +1,5 @@
 <form class="" (ngSubmit)="create()" novalidate>
-    <h1>Interviewer Details</h1>
+    <h2>Interviewer Details</h2>
     <h3>Section-1</h3>
     <div class="row">
         <ol>
@@ -34,7 +34,6 @@
         </form>
     </div>
 
-{{title}}
     <div class="col-sm-4">
         <h3> Humun Nature:{{article.value}}</h3>
         <md-select class="col-sm-1" [(ngModel)]="article.value" [ngModelOptions]="{standalone: true}">

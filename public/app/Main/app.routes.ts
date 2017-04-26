@@ -23,9 +23,7 @@ export const AppRoutes: Routes = [
         ]
     },
     {
-        path: 'articles',
-        children: [
-
+        path: 'articles', children: [
             { path: '', component: ListComponent },
             {
                 path: 'create', children: [
