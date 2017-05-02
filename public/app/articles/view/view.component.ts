@@ -28,6 +28,9 @@ export class ViewComponent {
     edit(id: string) {
         this._router.navigate([`/articles/edit/${id}`]);
     }
+      section(id: string) {
+        this._router.navigate([`/articles/create/LevelOne/${id}`])
+    }
     ngOnInit() {
         this.user = this._authenticationService.user
         this.paramsObserver = this._route.params.subscribe(params => {

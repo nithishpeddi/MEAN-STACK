@@ -30,3 +30,8 @@ button{
 .example-sidenav {
   padding: 20px;
 }
+body, td {
+ color: blue;
+ font-family: serif;
+ 
+}

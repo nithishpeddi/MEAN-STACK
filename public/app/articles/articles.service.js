@@ -16,11 +16,10 @@ var http_1 = require("@angular/http");
 var ArticlesService = (function () {
     function ArticlesService(_http) {
         this._http = _http;
-        this._baseURL = 'api/articles';
+        this._baseURL = 'api/articles'; //declare API 
         this._options = { headers: new http_1.Headers({ 'Content-Type': 'application/json' }) };
     }
     ArticlesService.prototype.create = function (article) {
-        console.log('article', article);
         return this._http
             .post(this._baseURL, article, this._options)
             .map(function (res) { return res.json(); })
@@ -61,4 +60,5 @@ ArticlesService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], ArticlesService);
 exports.ArticlesService = ArticlesService;
+// Material itself is a Design Principles , we apply it in angular framework for developing an application. 
 //# sourceMappingURL=articles.service.js.map

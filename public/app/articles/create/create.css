@@ -11,6 +11,7 @@ b{
 h3{
   color: red;
   font-family: sans-serif;
+  font-size: 20px;
 }
 div.stars {
   width: 270px;
@@ -37,6 +38,12 @@ input.star-5:checked ~ label.star:before {
   color: #FE7;
   text-shadow: 0 0 20px #952;
 }
+h4{
+  font-weight: normal;
+letter-spacing: .0em;
+margin-bottom: 1em;
+text-transform: lowercase;
+}
 
 input.star-1:checked ~ label.star:before { color: #F62; }
 
@@ -47,7 +54,7 @@ label.star:before {
   font-family: FontAwesome;
 }
 .fa {
-    font-size: 50px;
+    font-size: 30px;
     cursor: pointer;
     user-select: none;
 }

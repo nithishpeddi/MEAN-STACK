@@ -1,28 +1,7 @@
-<!--<form (ngSubmit)="signup()" class="Container">
-    <div class="form-group has-success col-sm-2">
-        <label class="control-label" for="input1">First Name</label>
-         <input type="text" class="form-control" id="input1" aria-describedby="helpBlock2" [(ngModel)]="user.firstName" name="firstName">
-    
-        
-        <label class="control-label" for="input2">Last Name</label>
-         <input type="text" class="form-control" id="input2" aria-describedby="helpBlock2" [(ngModel)]="user.lastName" name="lastName">
-   
-
-        <label class="control-label" for="input3">Email</label>
-         <input type="text" class="form-control" id="input1" aria-describedby="helpBlock2" [(ngModel)]="user.email" name="email">
-  
-        <label class="control-label" for="input4">User Name</label>
-         <input type="text" class="form-control" id="input4" aria-describedby="helpBlock2" [(ngModel)]="user.username" name="username">
-
-        <label class="control-label" for="input5">Password</label>
-         <input type="text" class="form-control" id="input5" aria-describedby="helpBlock2" [(ngModel)]="user.password" name="password">
-          <button type="submit" class="btn btn-primary btn-lg" value="Sign up">Sign up</button>
-    </div>
-   <span>{{errorMessage}}</span>
-</form>-->
-
 <form class="example-form" (ngSubmit)="signup()">
-
+<md-input-container class="example-full-width">
+    <input mdInput placeholder="Company (disabled)" disabled value="Positronic">
+  </md-input-container>
 
   <table class="example-full-width" cellspacing="5">
     <tr>

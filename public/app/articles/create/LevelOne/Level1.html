@@ -24,12 +24,10 @@
     <br>
     <br>
 
-    <div class="button-row col-sm-1">
-        <button md-raised-button class="button-row" value="Back" type="submit" routerLink="/articles/create" routerLinkActive="active">Back</button></div>
-    <div class="button-row col-sm-1">
-        <button md-fab class="button-row" value="Update" (click)="update()"><md-icon>Update</md-icon></button>
-    </div>
-    
+    <div class="button-row col-sm-2">
+        <button md-raised-button type="submit" value="Update" (click)="update()" routerLink="/articles/create" routerLinkActive="active">Update</button></div>
+
+
 </form>
 
 <router-outlet></router-outlet>

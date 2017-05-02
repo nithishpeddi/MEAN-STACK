@@ -27,6 +27,9 @@ var ViewComponent = (function () {
     ViewComponent.prototype.edit = function (id) {
         this._router.navigate(["/articles/edit/" + id]);
     };
+    ViewComponent.prototype.section = function (id) {
+        this._router.navigate(["/articles/create/LevelOne/" + id]);
+    };
     ViewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.user = this._authenticationService.user;

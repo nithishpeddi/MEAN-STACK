@@ -1,10 +1,10 @@
 <table class="container">
-    <h2>Employee Details</h2>
+    <h2>Candidate Details</h2>
     <div *ngIf="article && article.creator">
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th><b>Employee Name</b></th>
+                    <th><b>Candidate Name</b></th>
                     <th><b>Comments</b></th>
                     <th><b>Interview By</b></th>
                     <th><b>ThumbUp/Down</b></th>
@@ -28,16 +28,19 @@
             <button class="btn btn-warning" (click)="edit(article._id)">Edit</button>
 
         </div>
-        <div class="col-sm-4">
-            <a class="btn btn-danger" (click)="next(article._id)">Next Section </a>
+        <div class="col-sm-6">
+            <a class="btn btn-danger" (click)="next(article._id)"> Section-2 </a>
+            <a class="btn btn-danger " (click)="section(article._id)"> Section-3 </a>
 
         </div>
         <md-sidenav-container class="example-container">
             <md-sidenav #sidenav class="example-sidenav">
-                <ul><li>
-                <a href="https://www.google.com/">Search Google</a></li>
-                <br>
-               <li> <button type="button" >Contact Us</button></li></ul>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/">Search Google</a></li>
+                    <br>
+                    <li> <button type="button">Contact Us</button></li>
+                </ul>
             </md-sidenav>
 
             <div class="example-sidenav-content">

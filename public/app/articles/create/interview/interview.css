@@ -16,3 +16,9 @@ h3{
   color: red;
   font-family: sans-serif;
 }
+h4{
+  font-weight: normal;
+letter-spacing: .0em;
+margin-bottom: 1em;
+text-transform: lowercase;
+}

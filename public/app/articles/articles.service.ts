@@ -4,20 +4,19 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, Request, RequestMethod, Response } from '@angular/http';
 @Injectable()
 export class ArticlesService {
-    private _baseURL = 'api/articles';
+    private _baseURL = 'api/articles';//declare API 
     private _options: { headers: Headers } = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
     constructor(private _http: Http) {
 
-     }
-     
+    }
+
     create(article: any): Observable<any> {
-         console.log('article',article);
         return this._http
             .post(this._baseURL, article, this._options)
             .map((res: Response) => res.json())
             .catch(this.handleError);
-           
+
     }
     read(articleId: string): Observable<any> {
         return this._http
@@ -32,7 +31,7 @@ export class ArticlesService {
             .catch(this.handleError);
     }
     delete(articleId: any): Observable<any> {
-      
+
         return this._http
             .delete(`${this._baseURL}/${articleId}`)
             .map((res: Response) => res.json())
@@ -49,3 +48,4 @@ export class ArticlesService {
         return Observable.throw(error.json().message || 'Server error');
     }
 }
+// Material itself is a Design Principles , we apply it in angular framework for developing an application.

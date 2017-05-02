@@ -29,11 +29,10 @@ var SigninComponent = (function () {
 SigninComponent = __decorate([
     core_1.Component({
         selector: 'signin',
-        templateUrl: 'app/authentication/signin/signin.template.html',
-        styleUrls: ['app/authentication/signin/signin.css']
+        templateUrl: './signin.template.html',
+        styleUrls: ['./signin.css']
     }),
-    __metadata("design:paramtypes", [authentication_service_1.AuthenticationService,
-        router_1.Router])
+    __metadata("design:paramtypes", [authentication_service_1.AuthenticationService, router_1.Router])
 ], SigninComponent);
 exports.SigninComponent = SigninComponent;
 //# sourceMappingURL=signin.component.js.map

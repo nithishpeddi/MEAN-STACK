@@ -12,6 +12,8 @@ var material_1 = require("@angular/material");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
+var material_2 = require("@angular/material");
+var material_3 = require("@angular/material");
 var Level1AppModule = (function () {
     function Level1AppModule() {
     }
@@ -22,7 +24,7 @@ Level1AppModule = __decorate([
         declarations: [
             Level1_1.Level1Component
         ],
-        imports: [router_1.RouterModule, material_1.MaterialModule, forms_1.FormsModule, common_1.CommonModule],
+        imports: [router_1.RouterModule, material_1.MaterialModule, forms_1.FormsModule, common_1.CommonModule, material_2.MdIconModule, material_3.MdButtonModule],
     })
 ], Level1AppModule);
 exports.Level1AppModule = Level1AppModule;

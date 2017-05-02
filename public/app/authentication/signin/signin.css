@@ -28,6 +28,9 @@ button {
     margin-left: 15%;
     width: 20%;
 }
+input[type="text"]{
+ color: green;
+}
 
 /* Add a hover effect for buttons */
 button:hover {

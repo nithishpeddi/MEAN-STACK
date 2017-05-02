@@ -7,12 +7,12 @@ import { ArticlesComponent } from './articles.component';
 import { MaterialModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
 import { ViewsModule } from './view/view.module';
-import{InterviewModule } from './create/create.module';
+import { InterviewModule } from './create/create.module';
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        RouterModule, MaterialModule, MdDialogModule, ViewsModule,InterviewModule
+        RouterModule, MaterialModule, MdDialogModule, ViewsModule, InterviewModule
     ],
     declarations: [
         ArticlesComponent
