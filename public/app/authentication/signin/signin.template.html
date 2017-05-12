@@ -1,15 +1,15 @@
 <form (ngSubmit)="signin()">
-  
-<div class="row col-sm-3">
 
-        <label class="control-label"><b>Username:</b></label>
-        <input type="text" [(ngModel)]="credentials.username" name="username" placeholder="User Name">
-        <label>Password:</label>
-        <input type="text" [(ngModel)]="credentials.password" name="password" placeholder="Password">
+        <div class="row col-sm-3">
 
-        <button type="submit" class="btn btn-danger btn-lg" value="Sign In">Sign In</button>
+                <label class="control-label"><b>Username:</b></label>
+                <input type="text" [(ngModel)]="credentials.username" name="username" placeholder="User Name">
+                <label>Password:</label>
+                <input type="text" [(ngModel)]="credentials.password" name="password" placeholder="Password">
 
-        <span>{{errorMessage}}</span>
-</div>
+                <button type="submit" class="btn btn-danger btn-lg" value="Sign In">Sign In</button>
+
+                <span>{{errorMessage}}</span>
+        </div>
 </form>
 <router-outlet></router-outlet>

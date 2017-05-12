@@ -1,11 +1,8 @@
 
 items{
-    font-size:29px;
+    font-size:20px;
 }
-button{
-margin-left: 79px;
-margin-top: 0%;
-}
+
 .example-radio-group {
   display: inline-flex;
   flex-direction: column;
@@ -40,7 +37,4 @@ md-card{
    
 .fa{
     margin-left: 5%;
-}
-.btn{
-    margin-left:0px;
 }
